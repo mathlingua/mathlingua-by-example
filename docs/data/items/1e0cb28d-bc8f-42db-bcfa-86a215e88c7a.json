@@ -1,0 +1,124 @@
+{
+  "id": "1e0cb28d-bc8f-42db-bcfa-86a215e88c7a",
+  "kind": "Describes",
+  "definition_keys": [
+    "5c66756e6374696f6e3a6f6e3a746f"
+  ],
+  "heading": "\\function:on{A}:to{B}",
+  "heading_latex": "\\textrm{function on }A\\textrm{ to }B\\quad\\htmlClass{mlg-title-written}{f \\: : \\: A \\rightarrow B}",
+  "body_text": null,
+  "page": null,
+  "source": "[\\function:on{A}:to{B}]\nDescribes: f(x__) ::= y_\nwhen: A, B is \\set\nspecifies:\n. x__ \"in\" A\n. y_ \"in\" B\nsatisfies:\n. forAll: x \"in\" A\n  then:\n  . existsUnique: y \"in\" B\n    suchThat: f(x) = y\nDocumented:\n. called: \"function on $A?$ to $B?$\"\n. written: \"f? \\: : \\: A? \\rightarrow B?\"\nId: \"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"",
+  "sections": [
+    {
+      "label": "Describes",
+      "inline_argument": "f(x__) ::= y_",
+      "inline_latex": "f(x) ::= y",
+      "arguments": []
+    },
+    {
+      "label": "when",
+      "inline_argument": "A, B is \\set",
+      "inline_latex": "A, B \\textrm{ is } \\htmlData{mlg-ref=5c736574}{\\textrm{set}}",
+      "arguments": []
+    },
+    {
+      "label": "specifies",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "formulation",
+          "text": "x__ \"in\" A",
+          "latex": "x \\in A"
+        },
+        {
+          "kind": "formulation",
+          "text": "y_ \"in\" B",
+          "latex": "y \\in B"
+        }
+      ]
+    },
+    {
+      "label": "satisfies",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "forAll",
+              "inline_argument": "x \"in\" A",
+              "inline_latex": "x \\in A",
+              "arguments": []
+            },
+            {
+              "label": "then",
+              "inline_argument": null,
+              "inline_latex": null,
+              "arguments": [
+                {
+                  "kind": "group",
+                  "heading": null,
+                  "sections": [
+                    {
+                      "label": "existsUnique",
+                      "inline_argument": "y \"in\" B",
+                      "inline_latex": "y \\in B",
+                      "arguments": []
+                    },
+                    {
+                      "label": "suchThat",
+                      "inline_argument": "f(x) = y",
+                      "inline_latex": "f(x) = y",
+                      "arguments": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "called",
+              "inline_argument": "\"function on $A?$ to $B?$\"",
+              "inline_latex": "\\textrm{function on }A\\textrm{ to }B",
+              "arguments": []
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "written",
+              "inline_argument": "\"f? \\: : \\: A? \\rightarrow B?\"",
+              "inline_latex": "f \\: : \\: A \\rightarrow B",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

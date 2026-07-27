@@ -1,0 +1,27 @@
+{
+  "id": "865e62bb-4c3d-4fc7-8a72-6d503211c67b",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "Entity Structures"
+  },
+  "source": "SectionTitle: \"Entity Structures\"\nId: \"865e62bb-4c3d-4fc7-8a72-6d503211c67b\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"Entity Structures\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"865e62bb-4c3d-4fc7-8a72-6d503211c67b\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}
