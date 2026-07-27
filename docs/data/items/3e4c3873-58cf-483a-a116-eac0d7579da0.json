@@ -1,0 +1,27 @@
+{
+  "id": "3e4c3873-58cf-483a-a116-eac0d7579da0",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "The Requires Section"
+  },
+  "source": "SectionTitle: \"The Requires Section\"\nId: \"3e4c3873-58cf-483a-a116-eac0d7579da0\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"The Requires Section\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"3e4c3873-58cf-483a-a116-eac0d7579da0\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

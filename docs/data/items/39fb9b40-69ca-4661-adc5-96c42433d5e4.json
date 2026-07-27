@@ -1,0 +1,27 @@
+{
+  "id": "39fb9b40-69ca-4661-adc5-96c42433d5e4",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "Theorems"
+  },
+  "source": "SectionTitle: \"Theorems\"\nId: \"39fb9b40-69ca-4661-adc5-96c42433d5e4\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"Theorems\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"39fb9b40-69ca-4661-adc5-96c42433d5e4\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

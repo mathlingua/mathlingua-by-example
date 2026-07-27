@@ -1,0 +1,27 @@
+{
+  "id": "caec325a-d0c5-49d4-b1fd-63699ff1247a",
+  "kind": "Text",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "Text",
+    "text": "In the `satisfies:` section, you'll notice two ways \"in\" is used.\nFirst, it is used as `forAll: X \"in\" A` and later as `X \"in\"? B`\n(note the `?`).\n\nThe first `X \"in\" A` is a *specification* and introduces a symbol `X`\nthat is an element of `A`. Every specification automatically as an\nassociated statement form specified by using the `?` suffix. In this case\nthe statement `X \"in\"? B` represents the question of whether or not `X`\nis an element of `B`.\n\nSimilar to `\"op\"` specifications, infix describes also have an\nassociated statement form automatically available for them. For example,\nfor the `A \\:subset:/ B` infix describes we defined that introduces, `A`\nas a set that is a subset of `B`, one can write `A \\:subset?:/ C` which\nrepresents the statement that asks if `A` is a subset of `C`.\n\nThus specifications introduce symbols, and statements communicate\nquestions that may be true or false about symbols that already exist."
+  },
+  "source": "Text: \"In the `satisfies:` section, you'll notice two ways \\\"in\\\" is used.\n       First, it is used as `forAll: X \\\"in\\\" A` and later as `X \\\"in\\\"? B`\n       (note the `?`).\n\n       The first `X \\\"in\\\" A` is a *specification* and introduces a symbol `X`\n       that is an element of `A`. Every specification automatically as an\n       associated statement form specified by using the `?` suffix. In this case\n       the statement `X \\\"in\\\"? B` represents the question of whether or not `X`\n       is an element of `B`.\n\n       Similar to `\\\"op\\\"` specifications, infix describes also have an\n       associated statement form automatically available for them. For example,\n       for the `A \\:subset:/ B` infix describes we defined that introduces, `A`\n       as a set that is a subset of `B`, one can write `A \\:subset?:/ C` which\n       represents the statement that asks if `A` is a subset of `C`.\n\n       Thus specifications introduce symbols, and statements communicate\n       questions that may be true or false about symbols that already exist.\"\nId: \"caec325a-d0c5-49d4-b1fd-63699ff1247a\"",
+  "sections": [
+    {
+      "label": "Text",
+      "inline_argument": "\"In the `satisfies:` section, you'll notice two ways \\\"in\\\" is used.\n       First, it is used as `forAll: X \\\"in\\\" A` and later as `X \\\"in\\\"? B`\n       (note the `?`).\n\n       The first `X \\\"in\\\" A` is a *specification* and introduces a symbol `X`\n       that is an element of `A`. Every specification automatically as an\n       associated statement form specified by using the `?` suffix. In this case\n       the statement `X \\\"in\\\"? B` represents the question of whether or not `X`\n       is an element of `B`.\n\n       Similar to `\\\"op\\\"` specifications, infix describes also have an\n       associated statement form automatically available for them. For example,\n       for the `A \\:subset:/ B` infix describes we defined that introduces, `A`\n       as a set that is a subset of `B`, one can write `A \\:subset?:/ C` which\n       represents the statement that asks if `A` is a subset of `C`.\n\n       Thus specifications introduce symbols, and statements communicate\n       questions that may be true or false about symbols that already exist.\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"caec325a-d0c5-49d4-b1fd-63699ff1247a\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "e0ad7367-d31b-433a-8a9c-c631d59a2632",
+  "kind": "States",
+  "definition_keys": [
+    "5c2e6966662e2f"
+  ],
+  "heading": "P \\.iff./ Q",
+  "heading_latex": "P \\iff Q",
+  "body_text": null,
+  "page": null,
+  "source": "[P \\.iff./ Q]\nStates:\nwhen: P, Q is \\\\statement\nthat:\n. have: P\n  iff: Q\nDocumented:\n. written: \"P? \\iff Q?\"\nId: \"e0ad7367-d31b-433a-8a9c-c631d59a2632\"",
+  "sections": [
+    {
+      "label": "States",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "when",
+      "inline_argument": "P, Q is \\\\statement",
+      "inline_latex": "P, Q \\textrm{ is } \\textrm{statement}",
+      "arguments": []
+    },
+    {
+      "label": "that",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "have",
+              "inline_argument": "P",
+              "inline_latex": "P",
+              "arguments": []
+            },
+            {
+              "label": "iff",
+              "inline_argument": "Q",
+              "inline_latex": "Q",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "written",
+              "inline_argument": "\"P? \\iff Q?\"",
+              "inline_latex": "P \\iff Q",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"e0ad7367-d31b-433a-8a9c-c631d59a2632\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

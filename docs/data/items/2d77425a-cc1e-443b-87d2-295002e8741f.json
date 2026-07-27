@@ -1,0 +1,27 @@
+{
+  "id": "2d77425a-cc1e-443b-87d2-295002e8741f",
+  "kind": "Text",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "Text",
+    "text": "That constraint is also defined in a `Requires:` section because that\nallows the Mathlingua type checker to understand how a statement like `x\n\"in\" X` should be treated if `X \\subset Y`.\n\nFor example, with this, if one writes `X \\:subset:/ \\reals` and `\\reals`\nis defined such that `x \"in\" \\reals` means `x is \\real`, then if one\nwrites `x \"in\" X` the checker would know that means `x \"in\" \\reals`\nwhich means `x is \\real`. This is needed because the details in the\nsatisfies section is opaque to the checker."
+  },
+  "source": "Text: \"That constraint is also defined in a `Requires:` section because that\n       allows the Mathlingua type checker to understand how a statement like `x\n       \\\"in\\\" X` should be treated if `X \\subset Y`.\n\n       For example, with this, if one writes `X \\:subset:/ \\reals` and `\\reals`\n       is defined such that `x \\\"in\\\" \\reals` means `x is \\real`, then if one\n       writes `x \\\"in\\\" X` the checker would know that means `x \\\"in\\\" \\reals`\n       which means `x is \\real`. This is needed because the details in the\n       satisfies section is opaque to the checker.\"\nId: \"2d77425a-cc1e-443b-87d2-295002e8741f\"",
+  "sections": [
+    {
+      "label": "Text",
+      "inline_argument": "\"That constraint is also defined in a `Requires:` section because that\n       allows the Mathlingua type checker to understand how a statement like `x\n       \\\"in\\\" X` should be treated if `X \\subset Y`.\n\n       For example, with this, if one writes `X \\:subset:/ \\reals` and `\\reals`\n       is defined such that `x \\\"in\\\" \\reals` means `x is \\real`, then if one\n       writes `x \\\"in\\\" X` the checker would know that means `x \\\"in\\\" \\reals`\n       which means `x is \\real`. This is needed because the details in the\n       satisfies section is opaque to the checker.\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"2d77425a-cc1e-443b-87d2-295002e8741f\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

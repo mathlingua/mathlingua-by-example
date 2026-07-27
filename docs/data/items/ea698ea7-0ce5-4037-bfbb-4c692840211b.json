@@ -1,0 +1,27 @@
+{
+  "id": "ea698ea7-0ce5-4037-bfbb-4c692840211b",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "Infix Describes"
+  },
+  "source": "SectionTitle: \"Infix Describes\"\nId: \"ea698ea7-0ce5-4037-bfbb-4c692840211b\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"Infix Describes\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"ea698ea7-0ce5-4037-bfbb-4c692840211b\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

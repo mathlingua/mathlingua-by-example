@@ -1,0 +1,27 @@
+{
+  "id": "e526662a-8348-4df8-b106-f91cd75bf05f",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "Stating Axioms"
+  },
+  "source": "SectionTitle: \"Stating Axioms\"\nId: \"e526662a-8348-4df8-b106-f91cd75bf05f\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"Stating Axioms\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"e526662a-8348-4df8-b106-f91cd75bf05f\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

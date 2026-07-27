@@ -1,0 +1,27 @@
+{
+  "id": "c5553e55-f2d7-47eb-801c-30f599bfd0f1",
+  "kind": "Text",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "Text",
+    "text": "In mathematics, sometimes what looks like an infix operator actually\nintroduces a new symbol. For example, if $B$ is a set and one says let\n$A \\subset B$, what they mean is $A$ is a set and is specifically a set\nwhose elements all are elements of $B$.\n\nInfix Describes allow one to communicate this in Mathlingua:\n\n```mlg\n[A \\:subset:/ B]\nDescribes: A\nwhen: B is \\set\nextends: A is \\set\nsatisfies:\n. forAll: X \"in\" A\n  then: X \"in\"? B\nRequires:\n. capability: x_ \"in\" A :-> x_ \"in\" B\nDocumented:\n. called: \"$A?$ is a subset of $B?$\"\n. written: \"A? \\subset B?\"\nId: \"2b2b89a1-d106-4377-ae48-14c704063e5e\"\n```\n\nA infix describes is of the form `<symbol> \\:...:/ <expression>` and the\nleft hand side of the `\\:...:/` must match exactly the symbol introduced\nin `Describes: ...`.\n\nHere the `when:` section specifies that the argument `B` must satisfy `B\nis \\set`. Further, the `extends: A is \\set` specifies that by saying `A\n\\:subset:/ B` one is saying that `A is \\set` with additional properties.\n\nThose additional properties are communicated in the `satisfies:` section.\nSpecifically that $A \\subset B$ means every element of $A$ is an element\nof $B$."
+  },
+  "source": "Text: \"In mathematics, sometimes what looks like an infix operator actually\n       introduces a new symbol. For example, if $B$ is a set and one says let\n       $A \\subset B$, what they mean is $A$ is a set and is specifically a set\n       whose elements all are elements of $B$.\n\n       Infix Describes allow one to communicate this in Mathlingua:\n\n       ```mlg\n       [A \\:subset:/ B]\n       Describes: A\n       when: B is \\set\n       extends: A is \\set\n       satisfies:\n       . forAll: X \\\"in\\\" A\n         then: X \\\"in\\\"? B\n       Requires:\n       . capability: x_ \\\"in\\\" A :-> x_ \\\"in\\\" B\n       Documented:\n       . called: \\\"$A?$ is a subset of $B?$\\\"\n       . written: \\\"A? \\subset B?\\\"\n       Id: \\\"2b2b89a1-d106-4377-ae48-14c704063e5e\\\"\n       ```\n\n       A infix describes is of the form `<symbol> \\:...:/ <expression>` and the\n       left hand side of the `\\:...:/` must match exactly the symbol introduced\n       in `Describes: ...`.\n\n       Here the `when:` section specifies that the argument `B` must satisfy `B\n       is \\set`. Further, the `extends: A is \\set` specifies that by saying `A\n       \\:subset:/ B` one is saying that `A is \\set` with additional properties.\n\n       Those additional properties are communicated in the `satisfies:` section.\n       Specifically that $A \\subset B$ means every element of $A$ is an element\n       of $B$.\"\nId: \"c5553e55-f2d7-47eb-801c-30f599bfd0f1\"",
+  "sections": [
+    {
+      "label": "Text",
+      "inline_argument": "\"In mathematics, sometimes what looks like an infix operator actually\n       introduces a new symbol. For example, if $B$ is a set and one says let\n       $A \\subset B$, what they mean is $A$ is a set and is specifically a set\n       whose elements all are elements of $B$.\n\n       Infix Describes allow one to communicate this in Mathlingua:\n\n       ```mlg\n       [A \\:subset:/ B]\n       Describes: A\n       when: B is \\set\n       extends: A is \\set\n       satisfies:\n       . forAll: X \\\"in\\\" A\n         then: X \\\"in\\\"? B\n       Requires:\n       . capability: x_ \\\"in\\\" A :-> x_ \\\"in\\\" B\n       Documented:\n       . called: \\\"$A?$ is a subset of $B?$\\\"\n       . written: \\\"A? \\subset B?\\\"\n       Id: \\\"2b2b89a1-d106-4377-ae48-14c704063e5e\\\"\n       ```\n\n       A infix describes is of the form `<symbol> \\:...:/ <expression>` and the\n       left hand side of the `\\:...:/` must match exactly the symbol introduced\n       in `Describes: ...`.\n\n       Here the `when:` section specifies that the argument `B` must satisfy `B\n       is \\set`. Further, the `extends: A is \\set` specifies that by saying `A\n       \\:subset:/ B` one is saying that `A is \\set` with additional properties.\n\n       Those additional properties are communicated in the `satisfies:` section.\n       Specifically that $A \\subset B$ means every element of $A$ is an element\n       of $B$.\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"c5553e55-f2d7-47eb-801c-30f599bfd0f1\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

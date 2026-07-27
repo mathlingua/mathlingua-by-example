@@ -1,0 +1,27 @@
+{
+  "id": "35531180-accc-4a7e-a2c4-71fea1fbd3f1",
+  "kind": "Text",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "Text",
+    "text": "Sometimes theorems have results that are true if and only if certain\nassumptions are true. Mathlingua supports this with the optional `iff:`\nsection as follows:\n\n```mlg\nTheorem:\ngiven: A, B is \\set\nthen: A = B\niff:\n. A \\:subset?:/ B\n. B \\:subset?:/ A\nId: \"d3ee9362-d0be-47f0-bf0e-ecea7416d100\"\n```\n\nAnother aspect to notice here is that we can write `A, B is \\set` instead\nof\n```mlg-fragment\ngiven:\n. A is \\set\n. B is \\set\n```\nalthough specifying `A` and `B` is valid syntax too."
+  },
+  "source": "Text: \"Sometimes theorems have results that are true if and only if certain\n       assumptions are true. Mathlingua supports this with the optional `iff:`\n       section as follows:\n\n       ```mlg\n       Theorem:\n       given: A, B is \\set\n       then: A = B\n       iff:\n       . A \\:subset?:/ B\n       . B \\:subset?:/ A\n       Id: \\\"d3ee9362-d0be-47f0-bf0e-ecea7416d100\\\"\n       ```\n\n       Another aspect to notice here is that we can write `A, B is \\set` instead\n       of\n       ```mlg-fragment\n       given:\n       . A is \\set\n       . B is \\set\n       ```\n       although specifying `A` and `B` is valid syntax too.\"\nId: \"35531180-accc-4a7e-a2c4-71fea1fbd3f1\"",
+  "sections": [
+    {
+      "label": "Text",
+      "inline_argument": "\"Sometimes theorems have results that are true if and only if certain\n       assumptions are true. Mathlingua supports this with the optional `iff:`\n       section as follows:\n\n       ```mlg\n       Theorem:\n       given: A, B is \\set\n       then: A = B\n       iff:\n       . A \\:subset?:/ B\n       . B \\:subset?:/ A\n       Id: \\\"d3ee9362-d0be-47f0-bf0e-ecea7416d100\\\"\n       ```\n\n       Another aspect to notice here is that we can write `A, B is \\set` instead\n       of\n       ```mlg-fragment\n       given:\n       . A is \\set\n       . B is \\set\n       ```\n       although specifying `A` and `B` is valid syntax too.\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"35531180-accc-4a7e-a2c4-71fea1fbd3f1\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

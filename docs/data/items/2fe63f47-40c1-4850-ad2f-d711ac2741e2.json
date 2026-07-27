@@ -1,0 +1,27 @@
+{
+  "id": "2fe63f47-40c1-4850-ad2f-d711ac2741e2",
+  "kind": "Text",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "Text",
+    "text": "Now we have the machinery in place to describe our first theorem, which\nis a statement that can be proven.\n\n```mlg\nTheorem:\ngiven:\n. C is \\set\n. B \\:subset:/ C\n. A \\:subset:/ B\nthen:\n. A \\:subset?:/ C\nId: \"6a4bcb50-97bc-4d1b-a9b2-750c963bb720\"\n```\n\nThe `Theorem:` construct is used to communicate theorems, where the\n`given:` section represents the *inputs* to the theorem and the `then:`\nsection describes the results of the theorem."
+  },
+  "source": "Text: \"Now we have the machinery in place to describe our first theorem, which\n       is a statement that can be proven.\n\n       ```mlg\n       Theorem:\n       given:\n       . C is \\set\n       . B \\:subset:/ C\n       . A \\:subset:/ B\n       then:\n       . A \\:subset?:/ C\n       Id: \\\"6a4bcb50-97bc-4d1b-a9b2-750c963bb720\\\"\n       ```\n\n       The `Theorem:` construct is used to communicate theorems, where the\n       `given:` section represents the *inputs* to the theorem and the `then:`\n       section describes the results of the theorem.\"\nId: \"2fe63f47-40c1-4850-ad2f-d711ac2741e2\"",
+  "sections": [
+    {
+      "label": "Text",
+      "inline_argument": "\"Now we have the machinery in place to describe our first theorem, which\n       is a statement that can be proven.\n\n       ```mlg\n       Theorem:\n       given:\n       . C is \\set\n       . B \\:subset:/ C\n       . A \\:subset:/ B\n       then:\n       . A \\:subset?:/ C\n       Id: \\\"6a4bcb50-97bc-4d1b-a9b2-750c963bb720\\\"\n       ```\n\n       The `Theorem:` construct is used to communicate theorems, where the\n       `given:` section represents the *inputs* to the theorem and the `then:`\n       section describes the results of the theorem.\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"2fe63f47-40c1-4850-ad2f-d711ac2741e2\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

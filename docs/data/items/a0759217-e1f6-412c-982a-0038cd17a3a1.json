@@ -1,0 +1,76 @@
+{
+  "id": "a0759217-e1f6-412c-982a-0038cd17a3a1",
+  "kind": "Describes",
+  "definition_keys": [
+    "5c736574"
+  ],
+  "heading": "\\set",
+  "heading_latex": "\\textrm{set}",
+  "body_text": null,
+  "page": null,
+  "source": "[\\set]\nDescribes: X\nsatisfies:\n. \\axiom.of.empty.set\nRequires:\n. capability: x_ \"in\" X :-> \\\\abstract\nDocumented:\n. called: \"set\"\nId: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"",
+  "sections": [
+    {
+      "label": "Describes",
+      "inline_argument": "X",
+      "inline_latex": "X",
+      "arguments": []
+    },
+    {
+      "label": "satisfies",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "formulation",
+          "text": "\\axiom.of.empty.set",
+          "latex": "\\htmlData{mlg-ref=5c6178696f6d2e6f662e656d7074792e736574}{\\textrm{Axiom of Empty Set}}"
+        }
+      ]
+    },
+    {
+      "label": "Requires",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "capability",
+              "inline_argument": "x_ \"in\" X :-> \\\\abstract",
+              "inline_latex": null,
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "called",
+              "inline_argument": "\"set\"",
+              "inline_latex": "\\textrm{set}",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"a0759217-e1f6-412c-982a-0038cd17a3a1\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "2d84b63a-b5f7-4513-9b96-4a48c49465c5",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "The Role of Requires in the Checker"
+  },
+  "source": "SectionTitle: \"The Role of Requires in the Checker\"\nId: \"2d84b63a-b5f7-4513-9b96-4a48c49465c5\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"The Role of Requires in the Checker\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"2d84b63a-b5f7-4513-9b96-4a48c49465c5\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "c580c071-1b61-4413-960d-83493009a585",
+  "kind": "Text",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "Text",
+    "text": "The Describes: construct is used to specify an abstract concept, called a\ntype in other languages. To start, we specify that a set is an type.\nWe'll expand on it as we continue.\n\nHere is the minimal content needed to define an abstract concept in\nMathlingua.\n\n```mlg\n[\\set]\nDescribes: X\nDocumented:\n. called: \"set\"\nId: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"\n```\n\nThe `\\set` specifies the name used to identify this type. The\n`Describes:` construct is used to define abstract concepts, i.e. types.\n\nThe `Id:` is used to specify a unique ID that identifies this item. Note\nthat you do not need to specify this ID manually. If you omit the `Id:`\nsection entirely and run `mlg check`, an `Id:` section with a new ID will\nbe automatically generated for you."
+  },
+  "source": "Text: \"The Describes: construct is used to specify an abstract concept, called a\n       type in other languages. To start, we specify that a set is an type.\n       We'll expand on it as we continue.\n\n       Here is the minimal content needed to define an abstract concept in\n       Mathlingua.\n\n       ```mlg\n       [\\set]\n       Describes: X\n       Documented:\n       . called: \\\"set\\\"\n       Id: \\\"a0759217-e1f6-412c-982a-0038cd17a3a1\\\"\n       ```\n\n       The `\\set` specifies the name used to identify this type. The\n       `Describes:` construct is used to define abstract concepts, i.e. types.\n\n       The `Id:` is used to specify a unique ID that identifies this item. Note\n       that you do not need to specify this ID manually. If you omit the `Id:`\n       section entirely and run `mlg check`, an `Id:` section with a new ID will\n       be automatically generated for you.\"\nId: \"c580c071-1b61-4413-960d-83493009a585\"",
+  "sections": [
+    {
+      "label": "Text",
+      "inline_argument": "\"The Describes: construct is used to specify an abstract concept, called a\n       type in other languages. To start, we specify that a set is an type.\n       We'll expand on it as we continue.\n\n       Here is the minimal content needed to define an abstract concept in\n       Mathlingua.\n\n       ```mlg\n       [\\set]\n       Describes: X\n       Documented:\n       . called: \\\"set\\\"\n       Id: \\\"a0759217-e1f6-412c-982a-0038cd17a3a1\\\"\n       ```\n\n       The `\\set` specifies the name used to identify this type. The\n       `Describes:` construct is used to define abstract concepts, i.e. types.\n\n       The `Id:` is used to specify a unique ID that identifies this item. Note\n       that you do not need to specify this ID manually. If you omit the `Id:`\n       section entirely and run `mlg check`, an `Id:` section with a new ID will\n       be automatically generated for you.\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"c580c071-1b61-4413-960d-83493009a585\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "e1d413e6-767b-4b1f-a77c-64a169fb70d3",
+  "kind": "States",
+  "definition_keys": [
+    "5c69663a7468656e"
+  ],
+  "heading": "\\if{P}:then{Q}",
+  "heading_latex": "P \\Rightarrow Q",
+  "body_text": null,
+  "page": null,
+  "source": "[\\if{P}:then{Q}]\nStates:\nwhen: P, Q is \\\\statement\nthat:\n. if: P\n  then: Q\nDocumented:\n. written: \"P? \\Rightarrow Q?\"\nId: \"e1d413e6-767b-4b1f-a77c-64a169fb70d3\"",
+  "sections": [
+    {
+      "label": "States",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "when",
+      "inline_argument": "P, Q is \\\\statement",
+      "inline_latex": "P, Q \\textrm{ is } \\textrm{statement}",
+      "arguments": []
+    },
+    {
+      "label": "that",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "if",
+              "inline_argument": "P",
+              "inline_latex": "P",
+              "arguments": []
+            },
+            {
+              "label": "then",
+              "inline_argument": "Q",
+              "inline_latex": "Q",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "written",
+              "inline_argument": "\"P? \\Rightarrow Q?\"",
+              "inline_latex": "P \\Rightarrow Q",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"e1d413e6-767b-4b1f-a77c-64a169fb70d3\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

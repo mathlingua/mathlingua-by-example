@@ -1,0 +1,27 @@
+{
+  "id": "b6865f01-8e1a-4cbc-aa9f-468e4d61f2e5",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "Defining Concrete Instances"
+  },
+  "source": "SectionTitle: \"Defining Concrete Instances\"\nId: \"b6865f01-8e1a-4cbc-aa9f-468e4d61f2e5\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"Defining Concrete Instances\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"b6865f01-8e1a-4cbc-aa9f-468e4d61f2e5\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

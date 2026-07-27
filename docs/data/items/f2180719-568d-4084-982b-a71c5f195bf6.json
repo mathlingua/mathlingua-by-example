@@ -1,0 +1,51 @@
+{
+  "id": "f2180719-568d-4084-982b-a71c5f195bf6",
+  "kind": "Axiom",
+  "definition_keys": [
+    "5c6178696f6d2e6f662e656d7074792e736574"
+  ],
+  "heading": "\\axiom.of.empty.set",
+  "heading_latex": "\\textrm{Axiom of Empty Set}",
+  "body_text": null,
+  "page": null,
+  "source": "[\\axiom.of.empty.set]\nAxiom:\nthen:\n. exists: E is \\set\n  suchThat: E = \\empty.set\nId: \"f2180719-568d-4084-982b-a71c5f195bf6\"",
+  "sections": [
+    {
+      "label": "Axiom",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "then",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "exists",
+              "inline_argument": "E is \\set",
+              "inline_latex": "E \\textrm{ is } \\htmlData{mlg-ref=5c736574}{\\textrm{set}}",
+              "arguments": []
+            },
+            {
+              "label": "suchThat",
+              "inline_argument": "E = \\empty.set",
+              "inline_latex": "E = \\htmlData{mlg-ref=5c656d7074792e736574}{\\emptyset}",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"f2180719-568d-4084-982b-a71c5f195bf6\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "25a263ac-98ce-4a39-81b6-268cac8a4f9a",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "The States Construct"
+  },
+  "source": "SectionTitle: \"The States Construct\"\nId: \"25a263ac-98ce-4a39-81b6-268cac8a4f9a\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"The States Construct\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"25a263ac-98ce-4a39-81b6-268cac8a4f9a\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

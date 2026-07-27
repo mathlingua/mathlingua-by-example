@@ -1,0 +1,27 @@
+{
+  "id": "72f99da4-088d-472d-82a1-10907be96d7e",
+  "kind": "SectionTitle",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": {
+    "kind": "SectionTitle",
+    "text": "Specifications and Statements"
+  },
+  "source": "SectionTitle: \"Specifications and Statements\"\nId: \"72f99da4-088d-472d-82a1-10907be96d7e\"",
+  "sections": [
+    {
+      "label": "SectionTitle",
+      "inline_argument": "\"Specifications and Statements\"",
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"72f99da4-088d-472d-82a1-10907be96d7e\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}
