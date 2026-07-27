@@ -1,0 +1,502 @@
+
+Title: "Mathlingua by Example"
+Id: "ad838b0d-69fe-454b-b230-63e2e94ab18c"
+
+
+Text: "The Describes: construct is used to specify an abstract concept, called a
+       type in other languages. To start, we specify that a set is an type.
+       We'll expand on it as we continue.
+
+       Here is the minimal content needed to define an abstract concept in
+       Mathlingua.
+
+       ```mlg
+       [\set]
+       Describes: X
+       Documented:
+       . called: \"set\"
+       Id: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"
+       ```
+
+       The `\set` specifies the name used to identify this type. The
+       `Describes:` construct is used to define abstract concepts, i.e. types.
+
+       The `Id:` is used to specify a unique ID that identifies this item. Note
+       that you do not need to specify this ID manually. If you omit the `Id:`
+       section entirely and run `mlg check`, an `Id:` section with a new ID will
+       be automatically generated for you."
+Id: "c580c071-1b61-4413-960d-83493009a585"
+
+
+SectionTitle: "The Documented Section"
+Id: "e15e88c6-675c-4b51-83ce-d53c9469c56e"
+
+
+Text: "The `Documented:` section is used to document information about the
+       concept being defined. Either a `called:` or a `written:` item needs to
+       be specified.
+
+       The `called:` section's text is interpreted as non-math mode LaTeX and
+       allows you to specify what the construct is called when spoken aloud.
+       More than one item can be specified if there is more than one way to
+       describe the item.
+
+       The `written:` section's text is interpreted as math mode LaTeX and
+       allows you to specify what the construct looks like when written on
+       paper.
+
+       If only one of `written:` or `called:` is provided, the other item is
+       automatically generated as the same value. So in the example above
+       `called:` specifies that one says \"set\" when specifying the construct
+       and because `written:` is omitted, one would also write \"set\".
+
+       To make this more clear, consider the following example:
+
+       ```mlg-fragment
+       [\function:on{A}:to{B}]
+       Describes: f(x__) ::= y_
+       ...
+       Documented:
+       . called: \"function on $A?$ to $B?$\"
+       . written: \"f? \: : \: A? \rightarrow B?\"
+       ...
+       ```
+
+       We'll gloss over some details here, but at a high level, a type name can
+       have inputs, here `A` and `B`, and a `?` is used to refer to them in the
+       `Documented:` section.
+
+       Here the `called:` and `written:` sections communicate that if one had `g
+       is \function:on{X}:to{Y}`, then to describe that out loud one would say
+       \"g is a function on $X$ to $Y$\". To express the same thing written
+       down, one would write $g \: : \: X \rightarrow Y$. Further uses of
+       `Documented:` will be covered in more detail later."
+Id: "b85750a7-1af6-4208-bbf5-e77b939b9f7a"
+
+
+SectionTitle: "The Requires Section"
+Id: "3e4c3873-58cf-483a-a116-eac0d7579da0"
+
+
+Text: "Now we've started to describe a set, but we need to communicate that a
+       set has *set membership* capability. We do that with the `Requires:`
+       section.
+
+       ```mlg
+       [\set]
+       Describes: X
+       Requires:
+       . capability: x_ \"in\" X :-> \\abstract
+       Documented:
+       . called: \"set\"
+       Id: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"
+       ```
+
+       The `Requires:` is where you communicate that a concept has additional
+       capabilities that introduce new symbols or are operations (like `*` for
+       example).
+
+       In Mathlingua one writes `X is \set` to introduce the new symbol `X` and
+       specify it is of type is a `\set`. The form `<name> \"op\" <symbol>` is
+       called a specification and can be thought of as a function that reduces
+       down to an `<name> is <type>` form.
+
+       For example, if `X` is a set of `\real` numbers than `\"in\"` could be
+       defined such that `x \"in\" X` reduces to `x is \real`.
+
+       Here we say that a set has the concept of `\"in\"` which represents set
+       membership and the definition of the membership is on the right hand side
+       of `:->`. The built-in `\\abstract` represents that the specification is
+       abstract an sub-types of `\set` need to fill in the details.
+
+       Now we can state the definition of a set:"
+Id: "528fa26e-21c1-4d06-b8ae-5fcf7be3fa41"
+
+
+[\set]
+Describes: X
+satisfies:
+. \axiom.of.empty.set
+Requires:
+. capability: x_ "in" X :-> \\abstract
+Documented:
+. called: "set"
+Id: "a0759217-e1f6-412c-982a-0038cd17a3a1"
+
+
+SectionTitle: "Defining Concrete Instances"
+Id: "b6865f01-8e1a-4cbc-aa9f-468e4d61f2e5"
+
+
+Text: "Now we have the start of an (incomplete) definition of a set which is an
+       abstract concept. By that I mean, a \"set\" is a name describing a whole
+       collection of concrete objects that are each \"sets\". `Describes:` is
+       the mechanism to describe such a type.
+
+       A concrete object, on the other hand, is a specific instance of an type
+       and a `Defines:` is used to define such concrete instances.
+
+       For example, we can define the specific set, the empty set.
+
+       ```mlg
+       [\empty.set]
+       Defines: X is \set
+       expresses:
+       . not:
+         . exists: Y is \set
+           suchThat: Y \"in\" X
+       Documented:
+       . called: \"empty set\"
+       . written: \"\emptyset\"
+       Id: \"96908ddf-5fc5-455d-9cfd-eaf0fd6ada38\"
+       ```
+
+       Here `\empty.set` is the identifier for an empty set, and the `Defines: X
+       is \set` section specifies that `X` is the interal symbol that represents
+       the empty set and that an empty set is a set.
+
+       Next the `expresses:` section defines the characteristics of the empty
+       set, i.e. it is a set that contains no other sets, and again we document
+       how the empty set is spoken and written."
+Id: "5cf63c26-9162-448d-ad46-a09810ea5a14"
+
+
+[\empty.set]
+Defines: X is \set
+expresses:
+. not:
+  . exists: Y is \set
+    suchThat: Y "in" X
+Documented:
+. called: "empty set"
+. written: "\emptyset"
+Id: "96908ddf-5fc5-455d-9cfd-eaf0fd6ada38"
+
+
+SectionTitle: "Stating Axioms"
+Id: "e526662a-8348-4df8-b106-f91cd75bf05f"
+
+
+Text: "Now that we have described the abstract concept of a set, and have
+       defined a concrete set, we can express one of the axioms of
+       Zermelo-Frankel set theory that enables that set to exist.
+
+       ```mlg
+       [\axiom.of.empty.set]
+       Axiom:
+       then:
+       . exists: E is \set
+         suchThat: E = \empty.set
+       Id: \"f2180719-568d-4084-982b-a71c5f195bf6\"
+       ```
+
+       With that, we can update our definition of a `\set` to indicate that a
+       set must satisfy the axiom of empty sets.
+
+       ```mlg
+       [\set]
+       Describes: X
+       satisfies:
+       . \axiom.of.empty.set
+       Requires:
+       . capability: x_ \"in\" X :-> \\abstract
+       Documented:
+       . called: \"set\"
+       Id: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"
+       ```
+
+       Now this definition of a set is incomplete because there are many more
+       axioms in Zermelo-Frankel set theory, but this document isn't meant to be
+       exhaustive but instead give an introduction to describing concepts in
+       Mathlingua. As such, we won't add the other axioms to focus on more
+       aspects of Mathlingua."
+Id: "e798d1a3-1029-44f3-8b92-d794cbb6596c"
+
+
+[\axiom.of.empty.set]
+Axiom:
+then:
+. exists: E is \set
+  suchThat: E = \empty.set
+Id: "f2180719-568d-4084-982b-a71c5f195bf6"
+
+
+SectionTitle: "Infix Describes"
+Id: "ea698ea7-0ce5-4037-bfbb-4c692840211b"
+
+
+Text: "In mathematics, sometimes what looks like an infix operator actually
+       introduces a new symbol. For example, if $B$ is a set and one says let
+       $A \subset B$, what they mean is $A$ is a set and is specifically a set
+       whose elements all are elements of $B$.
+
+       Infix Describes allow one to communicate this in Mathlingua:
+
+       ```mlg
+       [A \:subset:/ B]
+       Describes: A
+       when: B is \set
+       extends: A is \set
+       satisfies:
+       . forAll: X \"in\" A
+         then: X \"in\"? B
+       Requires:
+       . capability: x_ \"in\" A :-> x_ \"in\" B
+       Documented:
+       . called: \"$A?$ is a subset of $B?$\"
+       . written: \"A? \subset B?\"
+       Id: \"2b2b89a1-d106-4377-ae48-14c704063e5e\"
+       ```
+
+       A infix describes is of the form `<symbol> \:...:/ <expression>` and the
+       left hand side of the `\:...:/` must match exactly the symbol introduced
+       in `Describes: ...`.
+
+       Here the `when:` section specifies that the argument `B` must satisfy `B
+       is \set`. Further, the `extends: A is \set` specifies that by saying `A
+       \:subset:/ B` one is saying that `A is \set` with additional properties.
+
+       Those additional properties are communicated in the `satisfies:` section.
+       Specifically that $A \subset B$ means every element of $A$ is an element
+       of $B$."
+Id: "c5553e55-f2d7-47eb-801c-30f599bfd0f1"
+
+
+SectionTitle: "The Role of Requires in the Checker"
+Id: "2d84b63a-b5f7-4513-9b96-4a48c49465c5"
+
+
+Text: "That constraint is also defined in a `Requires:` section because that
+       allows the Mathlingua type checker to understand how a statement like `x
+       \"in\" X` should be treated if `X \subset Y`.
+
+       For example, with this, if one writes `X \:subset:/ \reals` and `\reals`
+       is defined such that `x \"in\" \reals` means `x is \real`, then if one
+       writes `x \"in\" X` the checker would know that means `x \"in\" \reals`
+       which means `x is \real`. This is needed because the details in the
+       satisfies section is opaque to the checker."
+Id: "2d77425a-cc1e-443b-87d2-295002e8741f"
+
+
+SectionTitle: "Specifications and Statements"
+Id: "72f99da4-088d-472d-82a1-10907be96d7e"
+
+
+Text: "In the `satisfies:` section, you'll notice two ways \"in\" is used.
+       First, it is used as `forAll: X \"in\" A` and later as `X \"in\"? B`
+       (note the `?`).
+
+       The first `X \"in\" A` is a *specification* and introduces a symbol `X`
+       that is an element of `A`. Every specification automatically as an
+       associated statement form specified by using the `?` suffix. In this case
+       the statement `X \"in\"? B` represents the question of whether or not `X`
+       is an element of `B`.
+
+       Similar to `\"op\"` specifications, infix describes also have an
+       associated statement form automatically available for them. For example,
+       for the `A \:subset:/ B` infix describes we defined that introduces, `A`
+       as a set that is a subset of `B`, one can write `A \:subset?:/ C` which
+       represents the statement that asks if `A` is a subset of `C`.
+
+       Thus specifications introduce symbols, and statements communicate
+       questions that may be true or false about symbols that already exist."
+Id: "caec325a-d0c5-49d4-b1fd-63699ff1247a"
+
+
+[A \:subset:/ B]
+Describes: A
+when: B is \set
+extends: A is \set
+satisfies:
+. forAll: X "in" A
+  then: X "in"? B
+Requires:
+. capability: x_ "in" A :-> x_ "in" B
+Documented:
+. called: "$A?$ is a subset of $B?$"
+. written: "A? \subset B?"
+Id: "2b2b89a1-d106-4377-ae48-14c704063e5e"
+
+
+SectionTitle: "The States Construct"
+Id: "25a263ac-98ce-4a39-81b6-268cac8a4f9a"
+
+
+Text: "Above we discussed how a specification has an associated statement form,
+       but you can also create statements explicitly using the `States:`
+       construct.
+
+       For example, the following communciates the statement that $x$ is not an
+       element of a set $X$.
+
+       ```mlg
+       [x \.not.in./ X]
+       States:
+       when: x, X is \set
+       that:
+       . not: x \"in\"? X
+       Documented:
+       . written: \"x? \notin X?\"
+       Id: \"756e0f48-1c0e-4e05-b97a-9c4fcd577603\"
+       ```
+
+       The `<arg> \. ... ./ <arg>` syntax is used to specify a statement and
+       here we specify what the statement means in the `that:` section.
+
+       Again note that statements do *not* introduce new symbols but instead
+       make statements about existing symbols.
+
+       Thus one **cannot** write:
+       ```mlg-fragment
+       exists: x \.not.in./ X
+       suchThat: ...
+       ```
+
+       but one could write:
+       ```mlg-fragment
+       exists: x is \set
+       suchThat: x \.not.in./ X
+       ```
+       That is, `x` needs to first be introduced and then a statement about it
+       can be expressed.
+
+       With the `States:` construct we can write more compact forms of
+       statements. For example, consider the following:
+
+       ```mlg
+       [P \.iff./ Q]
+       States:
+       when: P, Q is \\statement
+       that:
+       . have: P
+         iff: Q
+       Documented:
+       . written: \"P? \iff Q?\"
+       Id: \"e0ad7367-d31b-433a-8a9c-c631d59a2632\"
+       ```
+
+       Here we made a shorthand for expressing a statement `P` is true if and
+       only if a statement `Q` is true. The builtin `\\statement` is the type of
+       statements.
+
+       With the above, one could write `(x \"in\"? X) \.iff./ (x \"in\"? Y)` for
+       example.
+
+       Note that the signature of a `States:` doesn't have to be of the form
+       `<arg> \. ... ./ <arg>`. For example consider the following,
+
+       ```mlg
+       [\if{P}:then{Q}]
+       States:
+       when: P, Q is \\statement
+       that:
+       . if: P
+         then: Q
+       Documented:
+       . written: \"P? \Rightarrow Q?\"
+       Id: \"e1d413e6-767b-4b1f-a77c-64a169fb70d3\"
+       ```
+       which represents if `P` implies `Q`.
+
+       All of the above statements are included below:"
+Id: "716d3f0d-e78c-432d-8670-e1df4a71f0ee"
+
+
+[x \.not.in./ X]
+States:
+when: x, X is \set
+that:
+. not: x "in"? X
+Documented:
+. written: "x? \notin X?"
+Id: "756e0f48-1c0e-4e05-b97a-9c4fcd577603"
+
+
+[P \.iff./ Q]
+States:
+when: P, Q is \\statement
+that:
+. have: P
+  iff: Q
+Documented:
+. written: "P? \iff Q?"
+Id: "e0ad7367-d31b-433a-8a9c-c631d59a2632"
+
+
+[\if{P}:then{Q}]
+States:
+when: P, Q is \\statement
+that:
+. if: P
+  then: Q
+Documented:
+. written: "P? \Rightarrow Q?"
+Id: "e1d413e6-767b-4b1f-a77c-64a169fb70d3"
+
+
+SectionTitle: "Theorems"
+Id: "39fb9b40-69ca-4661-adc5-96c42433d5e4"
+
+
+Text: "Now we have the machinery in place to describe our first theorem, which
+       is a statement that can be proven.
+
+       ```mlg
+       Theorem:
+       given:
+       . C is \set
+       . B \:subset:/ C
+       . A \:subset:/ B
+       then:
+       . A \:subset?:/ C
+       Id: \"6a4bcb50-97bc-4d1b-a9b2-750c963bb720\"
+       ```
+
+       The `Theorem:` construct is used to communicate theorems, where the
+       `given:` section represents the *inputs* to the theorem and the `then:`
+       section describes the results of the theorem."
+Id: "2fe63f47-40c1-4850-ad2f-d711ac2741e2"
+
+
+Theorem:
+given:
+. C is \set
+. B \:subset:/ C
+. A \:subset:/ B
+then:
+. A \:subset?:/ C
+Id: "6a4bcb50-97bc-4d1b-a9b2-750c963bb720"
+
+
+Text: "Sometimes theorems have results that are true if and only if certain
+       assumptions are true. Mathlingua supports this with the optional `iff:`
+       section as follows:
+
+       ```mlg
+       Theorem:
+       given: A, B is \set
+       then: A = B
+       iff:
+       . A \:subset?:/ B
+       . B \:subset?:/ A
+       Id: \"d3ee9362-d0be-47f0-bf0e-ecea7416d100\"
+       ```
+
+       Another aspect to notice here is that we can write `A, B is \set` instead
+       of
+       ```mlg-fragment
+       given:
+       . A is \set
+       . B is \set
+       ```
+       although specifying `A` and `B` is valid syntax too."
+Id: "35531180-accc-4a7e-a2c4-71fea1fbd3f1"
+
+
+Theorem:
+given: A, B is \set
+then: A = B
+iff:
+. A \:subset?:/ B
+. B \:subset?:/ A
+Id: "d3ee9362-d0be-47f0-bf0e-ecea7416d100"
