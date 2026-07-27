@@ -1,0 +1,66 @@
+
+Text: "The following illustrates how to define an abstract concept, in this case
+       a set, that satisfies some axioms and has certain operations on it. In
+       this case the operation is set membership \"in\" and \\abstract indicates
+       that the operation is abstract. That is, its definition is dependent on
+       the specific being defined.
+
+       The Requires: section indicates capabilities and definitions that this
+       definition also includes. In this case, for something to be a set it must
+       have the capability to have an \"in\" specification that represents set
+       membership.
+
+       In addition, the Enables: section indicates capabilities that an object
+       of this type has, not because they are there definitionally, but because
+       they are also available. For example, if $x$ and $y$ is an element of a
+       ring $R$ then the $+$ operation is part of the definition of the ring, so
+       one can write $x + y$. However, we can also write $x - y$, *not* because
+       the $-$ operation is part of the ring, but because it is an operation we
+       get from the $+$ operation.
+
+       The Requires: and Enables: sections allow you to clearly separate these
+       two cases.
+
+       In this case, the `Describes: X` uses the symbol `X` which means the
+       shape of a set is unknown. Contrast this, to `Describes: {x__ : ...}`
+       which says a set has a shape like `{x__ : ...}`.
+
+       We don't want to require a set to have a particular shape. We want it to
+       be abstract in that regard, but we want to allow write
+       ```mlg-fragment
+          X := {x_ : x_ is \real} is \set
+       ```
+
+       The from:capability: is how we communicate that in the case above, where an value of the form {y__ : ...} is used to introduce a set, then
+       the abstract concept `x_ \"in\" X` means `x_ member_of Y`.
+
+       Note that `member_of` is a keyword and `y member_of {x_ : x_ is \real}`,
+       for example, resolves to `y is \real`.
+
+       Next, this example illustrates the Documented:called: and Documented:description: sections"
+Id: "8d820a04-5252-4ef2-9177-b1b328328197"
+
+
+[\set]
+Describes: X
+satisfies: \axiom.of.empty.set
+Requires:
+. capability: x_ "in" X :-> \\abstract
+Enables:
+. from: Y ::= {y__ : ...}
+  capability: x_ "in" X :-> x_ member_of Y
+Documented:
+. called: "set"
+. description: "A set is the sole primitive object of the theory."
+Id: "27f9dbd5-5b5e-4be3-b280-1afef8411f2d"
+
+
+[\axiom.of.empty.set]
+Axiom:
+then:
+. exists: X is \set
+  suchThat:
+  . forAll: Y is \set
+    then:
+    . not: Y "in" X
+Id: "64ef9588-84e8-431a-93b8-0c74d3fe6151"
