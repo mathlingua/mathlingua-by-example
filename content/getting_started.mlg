@@ -87,6 +87,9 @@ Text: "Now we've started to describe a set, but we need to communicate that a
        Describes: X
        Requires:
        . capability: x_ \"in\" X :-> \\abstract
+       Enables:
+       . from: Y ::= {y__ : ...}
+         capability: x_ "in" X :-> x_ member_of Y
        Documented:
        . called: \"set\"
        Id: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"
@@ -119,6 +122,9 @@ satisfies:
 . \axiom.of.empty.set
 Requires:
 . capability: x_ "in" X :-> \\abstract
+Enables:
+. from: Y ::= {y__ : ...}
+  capability: x_ "in" X :-> x_ member_of Y
 Documented:
 . called: "set"
 Id: "a0759217-e1f6-412c-982a-0038cd17a3a1"
@@ -527,7 +533,7 @@ Text: "So far, our definitions have used `Describes: X`. That is, our
 
        That is consider the definition of a function:
        ```mlg
-       [\function:on{A}:to{B}]
+       [\function:?on{A}:?to{B}]
        Describes: f(x__) ::= y_
        when: A, B is \set
        specifies:
@@ -539,8 +545,8 @@ Text: "So far, our definitions have used `Describes: X`. That is, our
          . existsUnique: y \"in\" B
            suchThat: f(x) = y
        Documented:
-       . called: \"function on $A?$ to $B?$\"
-       . written: \"f? \: : \: A? \rightarrow B?\"
+       . called: \"function@[A]{ on $A?$}@[B]{ to $B?}$\"
+       . written: \"@[A, B]{f? \: : \: A? \rightarrow B?}\"
        Id: \"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"
        ```
 
@@ -586,7 +592,7 @@ Text: "So far, our definitions have used `Describes: X`. That is, our
 Id: "c4eaa2cf-c945-47b8-a7bd-4d88b7834ba8"
 
 
-[\function:on{A}:to{B}]
+[\function:?on{A}:?to{B}]
 Describes: f(x__) ::= y_
 when: A, B is \set
 specifies:
@@ -598,6 +604,65 @@ satisfies:
   . existsUnique: y "in" B
     suchThat: f(x) = y
 Documented:
-. called: "function on $A?$ to $B?$"
-. written: "f? \: : \: A? \rightarrow B?"
+. called: "function@[A]{ on $A?$}@[B]{ to $B?}$"
+. written: "@[A, B]{f? \: : \: A? \rightarrow B?}"
 Id: "1e0cb28d-bc8f-42db-bcfa-86a215e88c7a"
+
+
+[A \.set.cross./ B]
+Defines: X := \set@{(a_, b_) : a_ "in" A; b_ "in" B}
+when: A, B is \set
+Documented:
+. called: "Cartesian product of $A?$ and $B?$"
+. written: "A? \times B?"
+Id: "3bdd9cfb-f836-4d44-880a-873bb772cdef"
+
+
+[\binary.operation:on{X}]
+Describes: x_ * y_
+when: X is \set
+extends: * is \function:on{X \.set.cross./ X}:to{X}
+Documented:
+. called: "binary operation on $X?$"
+Id: "82c8948a-c30d-464b-8ab0-1c7bdb2ed770"
+
+
+[\magma]
+Describes: M ::= (X, *)
+extends: M is \set via X
+specifies:
+. * is \binary.operation:on{M}
+Enables:
+. capability: x_ "in" M :-> x_ is \magma.element:of{M}
+  written: "x_? \in M?"
+Documented:
+. called: "magma"
+Id: "91ffd40c-72fa-4a93-83f3-80ceb1ae124a"
+
+
+Theorem:
+given:
+. M ::= (X, *) is \magma
+. x "in" M
+then: x |M.*| x "in" M
+Id: "db1cee7a-87b0-42e1-9eb6-4941bec70f4f"
+
+
+[\magma.element:of{M ::= (X, *)}]
+Describes: x
+when: M is \magma
+extends: x "in" X
+Enables:
+. capability: x_ [*] y_ :=> x_ |M.*| y_
+  written: "x_? *? y_?"
+Documented:
+. called: "element of magma $M?$"
+Id: "d9405849-68a5-4721-9090-42eb0b9775d2"
+
+
+Theorem:
+given:
+. M ::= (Y, +) is \magma
+. y "in" M
+then: y + y "in" M
+Id: "5b0b91b6-dc35-4134-a0aa-4b40d93d1b83"
