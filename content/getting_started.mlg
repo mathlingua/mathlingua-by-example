@@ -751,3 +751,47 @@ extends: x is \semigroup.element:of{M}
 Documented:
 . called: "element of monoid $M?$"
 Id: "fee7d2ca-5ebc-48a6-8eed-06d623b5520f"
+
+
+[\group]
+Describes: G ::= (X, *, e)
+extends: G is \monoid via (X, *, e)
+satisfies:
+. forAll: x "in" G
+  then:
+  . exists: y "in" G
+    suchThat:
+    . x * y = e
+    . y * x = e
+Enables:
+. capability: x_ "in" G :-> x_ is \group.element:of{G}
+  written: "x_? \in G?"
+Documented:
+. called: "group"
+Id: "e4d7371d-29bd-431f-ab09-e114fe89e5cf"
+
+
+[\group.element:of{G}]
+Describes: x
+when: G is \group
+extends: x is \monoid.element:of{G}
+Enables:
+. capability: x.inv :=> \group.inverse:of{x}:in{G}
+  written: "x+?^{-1}"
+Documented:
+. called: "element of group $G?$"
+Id: "858abdda-c416-4a4e-a0bf-27ecf84cf008"
+
+
+[\group.inverse:of{x}:in{G ::= (X, *, e)}]
+Defines: y "in" G
+when:
+. G is \group
+. x "in" G
+expresses:
+. x * y = e
+. y * x = e
+Documented:
+. called: "group inverse of $x?$"
+. written: "x+?^{-1}"
+Id: "9b52b844-0cfa-4238-8c73-8b38265cca81"
