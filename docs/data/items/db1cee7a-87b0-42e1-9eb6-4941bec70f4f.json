@@ -1,0 +1,47 @@
+{
+  "id": "db1cee7a-87b0-42e1-9eb6-4941bec70f4f",
+  "kind": "Theorem",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": null,
+  "source": "Theorem:\ngiven:\n. M ::= (X, *) is \\magma\n. x \"in\" M\nthen: x |M.*| x \"in\" M\nId: \"db1cee7a-87b0-42e1-9eb6-4941bec70f4f\"",
+  "sections": [
+    {
+      "label": "Theorem",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "given",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "formulation",
+          "text": "M ::= (X, *) is \\magma",
+          "latex": "M ::= \\left(X, \\ast\\right) \\textrm{ is } \\htmlData{mlg-ref=5c6d61676d61}{\\textrm{magma}}"
+        },
+        {
+          "kind": "formulation",
+          "text": "x \"in\" M",
+          "latex": "x \\in M"
+        }
+      ]
+    },
+    {
+      "label": "then",
+      "inline_argument": "x |M.*| x \"in\" M",
+      "inline_latex": "x \\textrm{ M.* } x \\in M",
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"db1cee7a-87b0-42e1-9eb6-4941bec70f4f\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

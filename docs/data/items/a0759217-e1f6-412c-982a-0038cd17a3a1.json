@@ -8,7 +8,7 @@
   "heading_latex": "\\textrm{set}",
   "body_text": null,
   "page": null,
-  "source": "[\\set]\nDescribes: X\nsatisfies:\n. \\axiom.of.empty.set\nRequires:\n. capability: x_ \"in\" X :-> \\\\abstract\nDocumented:\n. called: \"set\"\nId: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"",
+  "source": "[\\set]\nDescribes: X\nsatisfies:\n. \\axiom.of.empty.set\nRequires:\n. capability: x_ \"in\" X :-> \\\\abstract\nEnables:\n. from: Y ::= {y__ : ...}\n  capability: x_ \"in\" X :-> x_ member_of Y\nDocumented:\n. called: \"set\"\nId: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"",
   "sections": [
     {
       "label": "Describes",
@@ -40,6 +40,31 @@
             {
               "label": "capability",
               "inline_argument": "x_ \"in\" X :-> \\\\abstract",
+              "inline_latex": null,
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Enables",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "from",
+              "inline_argument": "Y ::= {y__ : ...}",
+              "inline_latex": "Y ::= \\left\\{y \\: : \\: \\ldots\\right\\}",
+              "arguments": []
+            },
+            {
+              "label": "capability",
+              "inline_argument": "x_ \"in\" X :-> x_ member_of Y",
               "inline_latex": null,
               "arguments": []
             }

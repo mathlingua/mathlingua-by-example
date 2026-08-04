@@ -130,6 +130,13 @@ Documented:
 Id: "a0759217-e1f6-412c-982a-0038cd17a3a1"
 
 
+[\(finite)::set]
+Refines: X
+Documented:
+. adjective: "finite"
+Id: "d47cd24c-3ba8-4e83-bb95-e90e24057249"
+
+
 SectionTitle: "Defining Concrete Instances"
 Id: "b6865f01-8e1a-4cbc-aa9f-468e4d61f2e5"
 
@@ -177,6 +184,14 @@ Documented:
 . called: "empty set"
 . written: "\emptyset"
 Id: "96908ddf-5fc5-455d-9cfd-eaf0fd6ada38"
+
+
+[\(nonempty)::set]
+Refines: X
+satisfies: X != \empty.set
+Documented:
+. adjective: "nonempty"
+Id: "616950f0-7d70-48ff-a5ac-9d5d49272150"
 
 
 SectionTitle: "Stating Axioms"
@@ -771,6 +786,15 @@ Documented:
 Id: "e4d7371d-29bd-431f-ab09-e114fe89e5cf"
 
 
+[\(finite)::group]
+Refines: G
+implicitly:
+extends: G is \(finite)::monoid
+Documented:
+. adjective: "finite"
+Id: "28d2a1c1-89a5-4163-93e3-fbc21c97ec9a"
+
+
 [\group.element:of{G}]
 Describes: x
 when: G is \group
@@ -795,3 +819,143 @@ Documented:
 . called: "group inverse of $x?$"
 . written: "x+?^{-1}"
 Id: "9b52b844-0cfa-4238-8c73-8b38265cca81"
+
+
+[\(commutative)::binary.operation:on{X}]
+Refines: x_ * y_
+when: X is \set
+satisfies:
+. forAll: x, y "in" X
+  then: x * y = y * x
+Documented:
+. adjective: "commutative"
+Id: "ada35071-5d93-4e3c-bc69-96935d5394ed"
+
+
+[x \.commutes.with:?in{M ::= (X, *)}./ y]
+States:
+when:
+. M is \magma
+. x, y "in" M
+that: x * y = y * x
+Documented:
+. called: "$x?$ commutes with $y?$@[M]{ in $M?$}"
+Id: "3d7a204c-966d-47e7-a5b4-8f9e20fd749c"
+
+
+[\restriction:of{g(x__)}:on{X}]
+Describes: f(x__)
+when:
+. g is \function:on{A?}:to{B?}
+. X \:subset:/ A
+extends: f is \function:on{X}:to{B}
+satisfies: f(x__) := g(x__)
+Documented:
+. called: "restriction of $g?$ on $X?$"
+Id: "ea7eab01-792c-427f-91dc-a75f43513b38"
+
+
+[\cross.of.subset.is.subset.of.cross]
+Theorem:
+given:
+. X is \set
+. Y \:subset:/ X
+then:
+. (.Y \.set.cross./ Y.) \:subset?:/ (.X \.set.cross./ X.)
+Id: "db0160ae-5d28-4ad1-b2b6-d22964a88a2b"
+
+
+[H ::= (X', *', e') \:subgroup:/ G ::= (X, *, e)]
+Describes: H ::= (X', *', e')
+when: G is \group
+extends: H is \set via X'
+specifies:
+. X' \:(nonempty)::subset:/ X
+. (.*' is \restriction:of{`*`}:on{X' \.set.cross./ X'}.)[:1:]
+. e' "in" X'
+satisfies:
+. have:
+  . forAll: x, y "in" H
+    then:
+    . x *' y "in" H
+    . x *' y = x * y
+  . forAll: x "in" H
+    then: x.inv "in" H
+  asserting: H is \group
+Documented:
+. called: "$H?$ is a subgroup of $G?$"
+. written: "H? \leq G?"
+Justification:
+. [1]
+  have: *' is \restriction:of{`*`}:on{X' \.set.cross./ X'}
+  asserting: (.X' \.set.cross./ X'.) \:subset?:/ (.G \.set.cross./ G.)
+  because: X' \:subset?:/ X
+  by: \cross.of.subset.is.subset.of.cross#given{X := X; Y := X'}
+Id: "d8fe82d3-6f50-4711-ad64-76d4eb0615ff"
+
+
+[\subgroup.is.group]
+Theorem:
+given:
+. G is \group
+. H \:subgroup:/ G
+then: H is? \group
+Id: "946d3180-8614-4bd2-8fd6-d9bdce721e04"
+
+
+[G1 ::= (X1, *_1, e1) \.group.direct.product./ G2 ::= (X2, *_2, e2)]
+Defines: G3 ::= (X3, *_3, e3) is \group
+when: G1, G2 is \group
+expresses:
+. X3 := {(x1, x2) : x1 "in" X1; x2 "in" X2}
+. (a1_, a2_) *_3 (b1_, b2_) := (a1_ *_1 b1_, a2_ *_2 b2_)
+. e3 := (e1, e2)
+Documented:
+. called: "direct product of groups $G1?$ and $G2?$"
+. written: "G1? \times G2?"
+Id: "3a354c63-fc8c-4873-9751-62ecc651a5a9"
+
+
+Theorem:
+given: G1, G2 is \group
+then: G1 \.group.direct.product./ G2 is? \group
+Id: "d65025cf-8bf1-454f-9507-55890ab9f88c"
+
+
+Theorem:
+given:
+. G is \group
+. x, y "in" G
+then: (x * y).inv = y.inv * x.inv
+Id: "ef1b2ca8-1e12-4779-8e32-ed5cf8787c68"
+
+
+[\(abelian)::group]
+Refines: G ::= (X, *, e)
+satisfies:
+. forAll: x, y "in" G
+  then: x * y = y * x
+Documented:
+. adjective: "abelian"
+Id: "1dc777cd-31a5-489a-8b5a-05b94c647fb9"
+
+
+Theorem:
+given:
+. G ::= (X, *, e) is \group
+. x "in" G
+then: (x.inv).inv = x
+Id: "8c61fb44-d5ab-4be8-804a-0d6a95d83331"
+
+
+Theorem:
+given:
+. G ::= (X, *, e) is \group
+. x, y1, y2 "in" G
+where:
+. x * y1 = e
+. y1 * x = e
+. x * y2 = e
+. y2 * x = e
+then: y1 = y2
+Id: "a27fd487-85b4-4f18-b0ab-4be63db69f43"

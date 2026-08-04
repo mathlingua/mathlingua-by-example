@@ -1,0 +1,74 @@
+{
+  "id": "ea7eab01-792c-427f-91dc-a75f43513b38",
+  "kind": "Describes",
+  "definition_keys": [
+    "5c7265737472696374696f6e3a6f663a6f6e"
+  ],
+  "heading": "\\restriction:of{g(x__)}:on{X}",
+  "heading_latex": "\\textrm{restriction of }g(x)\\textrm{ on }X",
+  "body_text": null,
+  "page": null,
+  "source": "[\\restriction:of{g(x__)}:on{X}]\nDescribes: f(x__)\nwhen:\n. g is \\function:on{A?}:to{B?}\n. X \\:subset:/ A\nextends: f is \\function:on{X}:to{B}\nsatisfies: f(x__) := g(x__)\nDocumented:\n. called: \"restriction of $g?$ on $X?$\"\nId: \"ea7eab01-792c-427f-91dc-a75f43513b38\"",
+  "sections": [
+    {
+      "label": "Describes",
+      "inline_argument": "f(x__)",
+      "inline_latex": "f(x)",
+      "arguments": []
+    },
+    {
+      "label": "when",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "formulation",
+          "text": "g is \\function:on{A?}:to{B?}",
+          "latex": "\\htmlData{mlg-ref=5c66756e6374696f6e3a6f6e3a746f}{g \\: : \\: A \\rightarrow B}"
+        },
+        {
+          "kind": "formulation",
+          "text": "X \\:subset:/ A",
+          "latex": "\\htmlData{mlg-ref=5c3a7375627365743a2f}{X \\subset A}"
+        }
+      ]
+    },
+    {
+      "label": "extends",
+      "inline_argument": "f is \\function:on{X}:to{B}",
+      "inline_latex": "\\htmlData{mlg-ref=5c66756e6374696f6e3a6f6e3a746f}{f \\: : \\: X \\rightarrow B}",
+      "arguments": []
+    },
+    {
+      "label": "satisfies",
+      "inline_argument": "f(x__) := g(x__)",
+      "inline_latex": "f(x) := g(x)",
+      "arguments": []
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "called",
+              "inline_argument": "\"restriction of $g?$ on $X?$\"",
+              "inline_latex": "\\textrm{restriction of }g\\textrm{ on }X",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"ea7eab01-792c-427f-91dc-a75f43513b38\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

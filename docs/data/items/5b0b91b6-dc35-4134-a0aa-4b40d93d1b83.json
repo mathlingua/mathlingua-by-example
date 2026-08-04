@@ -1,0 +1,47 @@
+{
+  "id": "5b0b91b6-dc35-4134-a0aa-4b40d93d1b83",
+  "kind": "Theorem",
+  "definition_keys": [],
+  "heading": null,
+  "heading_latex": null,
+  "body_text": null,
+  "page": null,
+  "source": "Theorem:\ngiven:\n. M ::= (Y, +) is \\magma\n. y \"in\" M\nthen: y + y \"in\" M\nId: \"5b0b91b6-dc35-4134-a0aa-4b40d93d1b83\"",
+  "sections": [
+    {
+      "label": "Theorem",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": []
+    },
+    {
+      "label": "given",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "formulation",
+          "text": "M ::= (Y, +) is \\magma",
+          "latex": "M ::= \\left(Y, +\\right) \\textrm{ is } \\htmlData{mlg-ref=5c6d61676d61}{\\textrm{magma}}"
+        },
+        {
+          "kind": "formulation",
+          "text": "y \"in\" M",
+          "latex": "y \\in M"
+        }
+      ]
+    },
+    {
+      "label": "then",
+      "inline_argument": "y + y \"in\" M",
+      "inline_latex": "y + y \\in M",
+      "arguments": []
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"5b0b91b6-dc35-4134-a0aa-4b40d93d1b83\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

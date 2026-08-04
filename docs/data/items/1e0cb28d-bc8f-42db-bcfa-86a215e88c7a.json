@@ -2,13 +2,16 @@
   "id": "1e0cb28d-bc8f-42db-bcfa-86a215e88c7a",
   "kind": "Describes",
   "definition_keys": [
+    "5c66756e6374696f6e",
+    "5c66756e6374696f6e3a6f6e",
+    "5c66756e6374696f6e3a746f",
     "5c66756e6374696f6e3a6f6e3a746f"
   ],
-  "heading": "\\function:on{A}:to{B}",
-  "heading_latex": "\\textrm{function on }A\\textrm{ to }B\\quad\\htmlClass{mlg-title-written}{f \\: : \\: A \\rightarrow B}",
+  "heading": "\\function:?on{A}:?to{B}",
+  "heading_latex": "\\textrm{function}\\textrm{ on }A\\textrm{ to }B\\quad\\htmlClass{mlg-title-written}{f \\: : \\: A \\rightarrow B}",
   "body_text": null,
   "page": null,
-  "source": "[\\function:on{A}:to{B}]\nDescribes: f(x__) ::= y_\nwhen: A, B is \\set\nspecifies:\n. x__ \"in\" A\n. y_ \"in\" B\nsatisfies:\n. forAll: x \"in\" A\n  then:\n  . existsUnique: y \"in\" B\n    suchThat: f(x) = y\nDocumented:\n. called: \"function on $A?$ to $B?$\"\n. written: \"f? \\: : \\: A? \\rightarrow B?\"\nId: \"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"",
+  "source": "[\\function:?on{A}:?to{B}]\nDescribes: f(x__) ::= y_\nwhen: A, B is \\set\nspecifies:\n. x__ \"in\" A\n. y_ \"in\" B\nsatisfies:\n. forAll: x \"in\" A\n  then:\n  . existsUnique: y \"in\" B\n    suchThat: f(x) = y\nDocumented:\n. called: \"function@[A]{ on $A?$}@[B]{ to $B?}$\"\n. written: \"@[A, B]{f? \\: : \\: A? \\rightarrow B?}\"\nId: \"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"",
   "sections": [
     {
       "label": "Describes",
@@ -94,8 +97,8 @@
           "sections": [
             {
               "label": "called",
-              "inline_argument": "\"function on $A?$ to $B?$\"",
-              "inline_latex": "\\textrm{function on }A\\textrm{ to }B",
+              "inline_argument": "\"function@[A]{ on $A?$}@[B]{ to $B?}$\"",
+              "inline_latex": "\\textrm{function}",
               "arguments": []
             }
           ]
@@ -106,8 +109,8 @@
           "sections": [
             {
               "label": "written",
-              "inline_argument": "\"f? \\: : \\: A? \\rightarrow B?\"",
-              "inline_latex": "f \\: : \\: A \\rightarrow B",
+              "inline_argument": "\"@[A, B]{f? \\: : \\: A? \\rightarrow B?}\"",
+              "inline_latex": "",
               "arguments": []
             }
           ]

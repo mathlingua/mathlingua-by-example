@@ -1,0 +1,131 @@
+{
+  "id": "e4d7371d-29bd-431f-ab09-e114fe89e5cf",
+  "kind": "Describes",
+  "definition_keys": [
+    "5c67726f7570"
+  ],
+  "heading": "\\group",
+  "heading_latex": "\\textrm{group}",
+  "body_text": null,
+  "page": null,
+  "source": "[\\group]\nDescribes: G ::= (X, *, e)\nextends: G is \\monoid via (X, *, e)\nsatisfies:\n. forAll: x \"in\" G\n  then:\n  . exists: y \"in\" G\n    suchThat:\n    . x * y = e\n    . y * x = e\nEnables:\n. capability: x_ \"in\" G :-> x_ is \\group.element:of{G}\n  written: \"x_? \\in G?\"\nDocumented:\n. called: \"group\"\nId: \"e4d7371d-29bd-431f-ab09-e114fe89e5cf\"",
+  "sections": [
+    {
+      "label": "Describes",
+      "inline_argument": "G ::= (X, *, e)",
+      "inline_latex": "G ::= \\left(X, \\ast, e\\right)",
+      "arguments": []
+    },
+    {
+      "label": "extends",
+      "inline_argument": "G is \\monoid via (X, *, e)",
+      "inline_latex": "G \\textrm{ is } \\htmlData{mlg-ref=5c6d6f6e6f6964}{\\textrm{monoid}} \\textrm{ via } \\left(X, \\ast, e\\right)",
+      "arguments": []
+    },
+    {
+      "label": "satisfies",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "forAll",
+              "inline_argument": "x \"in\" G",
+              "inline_latex": "x \\in G",
+              "arguments": []
+            },
+            {
+              "label": "then",
+              "inline_argument": null,
+              "inline_latex": null,
+              "arguments": [
+                {
+                  "kind": "group",
+                  "heading": null,
+                  "sections": [
+                    {
+                      "label": "exists",
+                      "inline_argument": "y \"in\" G",
+                      "inline_latex": "y \\in G",
+                      "arguments": []
+                    },
+                    {
+                      "label": "suchThat",
+                      "inline_argument": null,
+                      "inline_latex": null,
+                      "arguments": [
+                        {
+                          "kind": "formulation",
+                          "text": "x * y = e",
+                          "latex": "x \\ast y = e"
+                        },
+                        {
+                          "kind": "formulation",
+                          "text": "y * x = e",
+                          "latex": "y \\ast x = e"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Enables",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "capability",
+              "inline_argument": "x_ \"in\" G :-> x_ is \\group.element:of{G}",
+              "inline_latex": null,
+              "arguments": []
+            },
+            {
+              "label": "written",
+              "inline_argument": "\"x_? \\in G?\"",
+              "inline_latex": "x \\in G",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "called",
+              "inline_argument": "\"group\"",
+              "inline_latex": "\\textrm{group}",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"e4d7371d-29bd-431f-ab09-e114fe89e5cf\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}
