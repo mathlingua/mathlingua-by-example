@@ -1,6 +1,6 @@
 {
   "id": "1e0cb28d-bc8f-42db-bcfa-86a215e88c7a",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c66756e6374696f6e",
     "5c66756e6374696f6e3a6f6e",
@@ -11,10 +11,10 @@
   "heading_latex": "\\textrm{function}\\textrm{ on }A\\textrm{ to }B\\quad\\htmlClass{mlg-title-written}{f \\: : \\: A \\rightarrow B}",
   "body_text": null,
   "page": null,
-  "source": "[\\function:?on{A}:?to{B}]\nDescribes: f(x__) ::= y_\nwhen: A, B is \\set\nspecifies:\n. x__ \"in\" A\n. y_ \"in\" B\nsatisfies:\n. forAll: x \"in\" A\n  then:\n  . existsUnique: y \"in\" B\n    suchThat: f(x) = y\nDocumented:\n. called: \"function@[A]{ on $A?$}@[B]{ to $B?}$\"\n. written: \"@[A, B]{f? \\: : \\: A? \\rightarrow B?}\"\nId: \"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"",
+  "source": "[\\function:?on{A}:?to{B}]\nDefines: f(x__) ::= y_\nwhen: A, B is \\set\ndeclares:\n. x__ \"in\" A\n. y_ \"in\" B\nsatisfies:\n. forAll: x \"in\" A\n  then:\n  . existsUnique: y \"in\" B\n    suchThat: f(x) = y\nDocumented:\n. called: \"function@[A]{ on $A?$}@[B]{ to $B?}$\"\n. written: \"@[A, B]{f? \\: : \\: A? \\rightarrow B?}\"\nId: \"1e0cb28d-bc8f-42db-bcfa-86a215e88c7a\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "f(x__) ::= y_",
       "inline_latex": "f(x) ::= y",
       "arguments": []
@@ -26,7 +26,7 @@
       "arguments": []
     },
     {
-      "label": "specifies",
+      "label": "declares",
       "inline_argument": null,
       "inline_latex": null,
       "arguments": [

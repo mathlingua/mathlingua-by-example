@@ -3,7 +3,7 @@ Title: "Mathlingua by Example"
 Id: "ad838b0d-69fe-454b-b230-63e2e94ab18c"
 
 
-Text: "The Describes: construct is used to specify an abstract concept, called a
+Text: "The Defines: construct is used to specify an abstract concept, called a
        type in other languages. To start, we specify that a set is an type.
        We'll expand on it as we continue.
 
@@ -12,14 +12,14 @@ Text: "The Describes: construct is used to specify an abstract concept, called a
 
        ```mlg
        [\set]
-       Describes: X
+       Defines: X
        Documented:
        . called: \"set\"
        Id: \"a0759217-e1f6-412c-982a-0038cd17a3a1\"
        ```
 
-       The `\set` specifies the name used to identify this type. The
-       `Describes:` construct is used to define abstract concepts, i.e. types.
+       The `\set` specifies the name used to identify this type. The `Defines:`
+       construct is used to define abstract concepts, i.e. types.
 
        The `Id:` is used to specify a unique ID that identifies this item. Note
        that you do not need to specify this ID manually. If you omit the `Id:`
@@ -54,7 +54,7 @@ Text: "The `Documented:` section is used to document information about the
 
        ```mlg-fragment
        [\function:on{A}:to{B}]
-       Describes: f(x__) ::= y_
+       Defines: f(x__) ::= y_
        ...
        Documented:
        . called: \"function on $A?$ to $B?$\"
@@ -84,7 +84,7 @@ Text: "Now we've started to describe a set, but we need to communicate that a
 
        ```mlg
        [\set]
-       Describes: X
+       Defines: X
        Requires:
        . capability: x_ \"in\" X :-> \\abstract
        Enables:
@@ -117,7 +117,7 @@ Id: "528fa26e-21c1-4d06-b8ae-5fcf7be3fa41"
 
 
 [\set]
-Describes: X
+Defines: X
 satisfies:
 . \axiom.of.empty.set
 Requires:
@@ -143,17 +143,17 @@ Id: "b6865f01-8e1a-4cbc-aa9f-468e4d61f2e5"
 
 Text: "Now we have the start of an (incomplete) definition of a set which is an
        abstract concept. By that I mean, a \"set\" is a name describing a whole
-       collection of concrete objects that are each \"sets\". `Describes:` is
-       the mechanism to describe such a type.
+       collection of concrete objects that are each \"sets\". `Defines:` is the
+       mechanism to describe such a type.
 
        A concrete object, on the other hand, is a specific instance of an type
-       and a `Defines:` is used to define such concrete instances.
+       and a `Declares:` is used to define such concrete instances.
 
        For example, we can define the specific set, the empty set.
 
        ```mlg
        [\empty.set]
-       Defines: X is \set
+       Declares: X is \set
        expresses:
        . not:
          . exists: Y is \set
@@ -164,9 +164,9 @@ Text: "Now we have the start of an (incomplete) definition of a set which is an
        Id: \"96908ddf-5fc5-455d-9cfd-eaf0fd6ada38\"
        ```
 
-       Here `\empty.set` is the identifier for an empty set, and the `Defines: X
-       is \set` section specifies that `X` is the interal symbol that represents
-       the empty set and that an empty set is a set.
+       Here `\empty.set` is the identifier for an empty set, and the `Declares:
+       X is \set` section specifies that `X` is the interal symbol that
+       represents the empty set and that an empty set is a set.
 
        Next the `expresses:` section defines the characteristics of the empty
        set, i.e. it is a set that contains no other sets, and again we document
@@ -175,7 +175,7 @@ Id: "5cf63c26-9162-448d-ad46-a09810ea5a14"
 
 
 [\empty.set]
-Defines: X is \set
+Declares: X is \set
 expresses:
 . not:
   . exists: Y is \set
@@ -216,7 +216,7 @@ Text: "Now that we have described the abstract concept of a set, and have
 
        ```mlg
        [\set]
-       Describes: X
+       Defines: X
        satisfies:
        . \axiom.of.empty.set
        Requires:
@@ -255,9 +255,9 @@ Text: "In mathematics, sometimes what looks like an infix operator actually
 
        ```mlg
        [A \:subset:/ B]
-       Describes: A
+       Defines: A
        when: B is \set
-       extends: A is \set
+       means: A is \set
        satisfies:
        . forAll: X \"in\" A
          then: X \"in\"? B
@@ -271,10 +271,10 @@ Text: "In mathematics, sometimes what looks like an infix operator actually
 
        A infix describes is of the form `<symbol> \:...:/ <expression>` and the
        left hand side of the `\:...:/` must match exactly the symbol introduced
-       in `Describes: ...`.
+       in `Defines: ...`.
 
        Here the `when:` section specifies that the argument `B` must satisfy `B
-       is \set`. Further, the `extends: A is \set` specifies that by saying `A
+       is \set`. Further, the `means: A is \set` specifies that by saying `A
        \:subset:/ B` one is saying that `A is \set` with additional properties.
 
        Those additional properties are communicated in the `satisfies:` section.
@@ -325,9 +325,9 @@ Id: "caec325a-d0c5-49d4-b1fd-63699ff1247a"
 
 
 [A \:subset:/ B]
-Describes: A
+Defines: A
 when: B is \set
-extends: A is \set
+means: A is \set
 satisfies:
 . forAll: X "in" A
   then: X "in"? B
@@ -527,8 +527,8 @@ SectionTitle: "Entity Structures"
 Id: "865e62bb-4c3d-4fc7-8a72-6d503211c67b"
 
 
-Text: "So far, our definitions have used `Describes: X`. That is, our
-       definitions do not specify a shape the entity being defined could have.
+Text: "So far, our definitions have used `Defines: X`. That is, our definitions
+       do not specify a shape the entity being defined could have.
 
        Mathlingua supports the following structures:
 
@@ -549,9 +549,9 @@ Text: "So far, our definitions have used `Describes: X`. That is, our
        That is consider the definition of a function:
        ```mlg
        [\function:?on{A}:?to{B}]
-       Describes: f(x__) ::= y_
+       Defines: f(x__) ::= y_
        when: A, B is \set
-       specifies:
+       declares:
        . x__ \"in\" A
        . y_ \"in\" B
        satisfies:
@@ -571,11 +571,11 @@ Text: "So far, our definitions have used `Describes: X`. That is, our
        function is that it maps an input to a unique output, which is described
        in the `satisfies:` section.
 
-       If the `Describes:` is of the form, `Describes: f(x_) ::= y_` then one
-       can write `f(x)`. That is, `f` must have exactly one input. If the
-       `Describes:` was instead `Describes: f(x_, y_) ::= z_` then one could
-       write `f(x, y)` but not `f(x)`. That is, the mapping is called with
-       exactly two arguments.
+       If the `Defines:` is of the form, `Defines: f(x_) ::= y_` then one can
+       write `f(x)`. That is, `f` must have exactly one input. If the `Defines:`
+       was instead `Defines: f(x_, y_) ::= z_` then one could write `f(x, y)`
+       but not `f(x)`. That is, the mapping is called with exactly two
+       arguments.
 
        Here a symbol with a trailing `_` indicates a placeholder. This makes it
        unambiguous to specify a mapping from a mapping's value. That is, `f(x_)`
@@ -598,7 +598,7 @@ Text: "So far, our definitions have used `Describes: X`. That is, our
        tuple with one value is treated in Mathlingua as the value itself, `f(a)`
        is treated like `f((a))` but `(a)` and `a` mean the same.
 
-       As a result, using `f(x__)` in the `Describes:` for our definition of a
+       As a result, using `f(x__)` in the `Defines:` for our definition of a
        function allows us to talk about a function as if it only has one input,
        and still support multiple argument functions.
 
@@ -608,9 +608,9 @@ Id: "c4eaa2cf-c945-47b8-a7bd-4d88b7834ba8"
 
 
 [\function:?on{A}:?to{B}]
-Describes: f(x__) ::= y_
+Defines: f(x__) ::= y_
 when: A, B is \set
-specifies:
+declares:
 . x__ "in" A
 . y_ "in" B
 satisfies:
@@ -625,7 +625,7 @@ Id: "1e0cb28d-bc8f-42db-bcfa-86a215e88c7a"
 
 
 [A \.set.cross./ B]
-Defines: X := \set@{(a_, b_) : a_ "in" A; b_ "in" B}
+Declares: X := \set@{(a_, b_) : a_ "in" A; b_ "in" B}
 when: A, B is \set
 Documented:
 . called: "Cartesian product of $A?$ and $B?$"
@@ -634,9 +634,9 @@ Id: "3bdd9cfb-f836-4d44-880a-873bb772cdef"
 
 
 [\binary.operation:on{X}]
-Describes: x_ * y_
+Defines: x_ * y_
 when: X is \set
-extends: * is \function:on{X \.set.cross./ X}:to{X}
+means: * is \function:on{X \.set.cross./ X}:to{X}
 Documented:
 . called: "binary operation on $X?$"
 Id: "82c8948a-c30d-464b-8ab0-1c7bdb2ed770"
@@ -654,9 +654,9 @@ Id: "e23d5d7d-eed8-4efc-bdda-d316af89684e"
 
 
 [\magma]
-Describes: M ::= (X, *)
-extends: M is \set via X
-specifies:
+Defines: M ::= (X, *)
+means: M is \set via X
+declares:
 . * is \binary.operation:on{M}
 Enables:
 . capability: x_ "in" M :-> x_ is \magma.element:of{M}
@@ -667,9 +667,9 @@ Id: "91ffd40c-72fa-4a93-83f3-80ceb1ae124a"
 
 
 [\magma.element:of{M ::= (X, *)}]
-Describes: x
+Defines: x
 when: M is \magma
-extends: x "in" X
+means: x "in" X
 Enables:
 . capability: x_ [*] y_ :=> x_ |M.*| y_
   written: "x_? *? y_?"
@@ -695,8 +695,8 @@ Id: "5b0b91b6-dc35-4134-a0aa-4b40d93d1b83"
 
 
 [\quasigroup]
-Describes: Q ::= (X, *)
-extends: Q is \magma via (X, *)
+Defines: Q ::= (X, *)
+means: Q is \magma via (X, *)
 satisfies:
 . forAll: a, b "in" Q
   then:
@@ -713,18 +713,18 @@ Id: "49582242-a047-48ae-aced-77654d9a48aa"
 
 
 [\quasigroup.element:of{Q ::= (X, *)}]
-Describes: x
+Defines: x
 when: Q is \quasigroup
-extends: x is \magma.element:of{Q}
+means: x is \magma.element:of{Q}
 Documented:
 . called: "element of quasigroup $Q?$"
 Id: "2f5a9f56-286c-4703-a953-316fa32e57dc"
 
 
 [\semigroup]
-Describes: S ::= (X, *)
-extends: S is \magma via (X, *)
-specifies: * is \(associative)::binary.operation:on{X}
+Defines: S ::= (X, *)
+means: S is \magma via (X, *)
+declares: * is \(associative)::binary.operation:on{X}
 Enables:
 . capability: x_ "in" S :-> x_ is \semigroup.element:of{S}
   written: "x_? \in S?"
@@ -734,18 +734,18 @@ Id: "6ec2faf5-7d2c-4918-a559-6415b94f2b1f"
 
 
 [\semigroup.element:of{S ::= (X, *)}]
-Describes: x
+Defines: x
 when: S is \semigroup
-extends: x is \magma.element:of{S}
+means: x is \magma.element:of{S}
 Documented:
 . called: "element of semigroup $S?$"
 Id: "5ce95378-5760-4728-b0d2-334848109a32"
 
 
 [\monoid]
-Describes: M ::= (X, *, e)
-extends: M is \semigroup via (X, *)
-specifies: e "in" X
+Defines: M ::= (X, *, e)
+means: M is \semigroup via (X, *)
+declares: e "in" X
 satisfies:
 . forAll: x "in" M
   then:
@@ -760,17 +760,17 @@ Id: "034bf6ff-ba6e-4fac-b47e-65cc85d15642"
 
 
 [\monoid.element:of{M}]
-Describes: x
+Defines: x
 when: M is \monoid
-extends: x is \semigroup.element:of{M}
+means: x is \semigroup.element:of{M}
 Documented:
 . called: "element of monoid $M?$"
 Id: "fee7d2ca-5ebc-48a6-8eed-06d623b5520f"
 
 
 [\group]
-Describes: G ::= (X, *, e)
-extends: G is \monoid via (X, *, e)
+Defines: G ::= (X, *, e)
+means: G is \monoid via (X, *, e)
 satisfies:
 . forAll: x "in" G
   then:
@@ -789,16 +789,16 @@ Id: "e4d7371d-29bd-431f-ab09-e114fe89e5cf"
 [\(finite)::group]
 Refines: G
 implicitly:
-extends: G is \(finite)::monoid
+means: G is \(finite)::monoid
 Documented:
 . adjective: "finite"
 Id: "28d2a1c1-89a5-4163-93e3-fbc21c97ec9a"
 
 
 [\group.element:of{G}]
-Describes: x
+Defines: x
 when: G is \group
-extends: x is \monoid.element:of{G}
+means: x is \monoid.element:of{G}
 Enables:
 . capability: x.inv :=> \group.inverse:of{x}:in{G}
   written: "x+?^{-1}"
@@ -808,7 +808,7 @@ Id: "858abdda-c416-4a4e-a0bf-27ecf84cf008"
 
 
 [\group.inverse:of{x}:in{G ::= (X, *, e)}]
-Defines: y "in" G
+Declares: y "in" G
 when:
 . G is \group
 . x "in" G
@@ -844,11 +844,11 @@ Id: "3d7a204c-966d-47e7-a5b4-8f9e20fd749c"
 
 
 [\restriction:of{g(x__)}:on{X}]
-Describes: f(x__)
+Defines: f(x__)
 when:
 . g is \function:on{A?}:to{B?}
 . X \:subset:/ A
-extends: f is \function:on{X}:to{B}
+means: f is \function:on{X}:to{B}
 satisfies: f(x__) := g(x__)
 Documented:
 . called: "restriction of $g?$ on $X?$"
@@ -866,10 +866,10 @@ Id: "db0160ae-5d28-4ad1-b2b6-d22964a88a2b"
 
 
 [H ::= (X', *', e') \:subgroup:/ G ::= (X, *, e)]
-Describes: H ::= (X', *', e')
+Defines: H ::= (X', *', e')
 when: G is \group
-extends: H is \set via X'
-specifies:
+means: H is \set via X'
+declares:
 . X' \:(nonempty)::subset:/ X
 . (.*' is \restriction:of{`*`}:on{X' \.set.cross./ X'}.)[:1:]
 . e' "in" X'
@@ -904,7 +904,7 @@ Id: "946d3180-8614-4bd2-8fd6-d9bdce721e04"
 
 
 [G1 ::= (X1, *_1, e1) \.group.direct.product./ G2 ::= (X2, *_2, e2)]
-Defines: G3 ::= (X3, *_3, e3) is \group
+Declares: G3 ::= (X3, *_3, e3) is \group
 when: G1, G2 is \group
 expresses:
 . X3 := {(x1, x2) : x1 "in" X1; x2 "in" X2}

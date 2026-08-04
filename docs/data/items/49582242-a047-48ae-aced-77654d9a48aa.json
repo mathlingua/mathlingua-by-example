@@ -1,6 +1,6 @@
 {
   "id": "49582242-a047-48ae-aced-77654d9a48aa",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c717561736967726f7570"
   ],
@@ -8,16 +8,16 @@
   "heading_latex": "\\textrm{quasigroup}",
   "body_text": null,
   "page": null,
-  "source": "[\\quasigroup]\nDescribes: Q ::= (X, *)\nextends: Q is \\magma via (X, *)\nsatisfies:\n. forAll: a, b \"in\" Q\n  then:\n  . existsUnique: x, y \"in\" Q\n    suchThat:\n    . a * x = b\n    . y * a = b\nEnables:\n. capability: x_ \"in\" Q :-> x_ is \\quasigroup.element:of{Q}\n  written: \"x_? \\in Q?\"\nDocumented:\n. called: \"quasigroup\"\nId: \"49582242-a047-48ae-aced-77654d9a48aa\"",
+  "source": "[\\quasigroup]\nDefines: Q ::= (X, *)\nmeans: Q is \\magma via (X, *)\nsatisfies:\n. forAll: a, b \"in\" Q\n  then:\n  . existsUnique: x, y \"in\" Q\n    suchThat:\n    . a * x = b\n    . y * a = b\nEnables:\n. capability: x_ \"in\" Q :-> x_ is \\quasigroup.element:of{Q}\n  written: \"x_? \\in Q?\"\nDocumented:\n. called: \"quasigroup\"\nId: \"49582242-a047-48ae-aced-77654d9a48aa\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "Q ::= (X, *)",
       "inline_latex": "Q ::= \\left(X, \\ast\\right)",
       "arguments": []
     },
     {
-      "label": "extends",
+      "label": "means",
       "inline_argument": "Q is \\magma via (X, *)",
       "inline_latex": "Q \\textrm{ is } \\htmlData{mlg-ref=5c6d61676d61}{\\textrm{magma}} \\textrm{ via } \\left(X, \\ast\\right)",
       "arguments": []

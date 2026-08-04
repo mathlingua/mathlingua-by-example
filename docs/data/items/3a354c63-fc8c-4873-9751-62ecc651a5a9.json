@@ -1,6 +1,6 @@
 {
   "id": "3a354c63-fc8c-4873-9751-62ecc651a5a9",
-  "kind": "Defines",
+  "kind": "Declares",
   "definition_keys": [
     "5c2e67726f75702e6469726563742e70726f647563742e2f"
   ],
@@ -12,10 +12,10 @@
   ],
   "body_text": null,
   "page": null,
-  "source": "[G1 ::= (X1, *_1, e1) \\.group.direct.product./ G2 ::= (X2, *_2, e2)]\nDefines: G3 ::= (X3, *_3, e3) is \\group\nwhen: G1, G2 is \\group\nexpresses:\n. X3 := {(x1, x2) : x1 \"in\" X1; x2 \"in\" X2}\n. (a1_, a2_) *_3 (b1_, b2_) := (a1_ *_1 b1_, a2_ *_2 b2_)\n. e3 := (e1, e2)\nDocumented:\n. called: \"direct product of groups $G1?$ and $G2?$\"\n. written: \"G1? \\times G2?\"\nId: \"3a354c63-fc8c-4873-9751-62ecc651a5a9\"",
+  "source": "[G1 ::= (X1, *_1, e1) \\.group.direct.product./ G2 ::= (X2, *_2, e2)]\nDeclares: G3 ::= (X3, *_3, e3) is \\group\nwhen: G1, G2 is \\group\nexpresses:\n. X3 := {(x1, x2) : x1 \"in\" X1; x2 \"in\" X2}\n. (a1_, a2_) *_3 (b1_, b2_) := (a1_ *_1 b1_, a2_ *_2 b2_)\n. e3 := (e1, e2)\nDocumented:\n. called: \"direct product of groups $G1?$ and $G2?$\"\n. written: \"G1? \\times G2?\"\nId: \"3a354c63-fc8c-4873-9751-62ecc651a5a9\"",
   "sections": [
     {
-      "label": "Defines",
+      "label": "Declares",
       "inline_argument": "G3 ::= (X3, *_3, e3) is \\group",
       "inline_latex": "G_3 ::= \\left(X_3, \\ast_3, e_3\\right) \\textrm{ is } \\htmlData{mlg-ref=5c67726f7570}{\\textrm{group}}",
       "arguments": []
@@ -34,7 +34,7 @@
         {
           "kind": "formulation",
           "text": "X3 := {(x1, x2) : x1 \"in\" X1; x2 \"in\" X2}",
-          "latex": "X_3 := \\left\\{ \\left(x_1, x_2\\right) \\: : \\: x_1 \\in X_1, x_2 \\in X_2 \\right\\}"
+          "latex": "X_3 := \\left\\{ \\left(x_1, x_2\\right) \\: : \\: x_1 \\in X_1;\\, x_2 \\in X_2 \\right\\}"
         },
         {
           "kind": "formulation",

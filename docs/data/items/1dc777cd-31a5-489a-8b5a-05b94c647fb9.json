@@ -13,7 +13,7 @@
     {
       "label": "Refines",
       "inline_argument": "G ::= (X, *, e)",
-      "inline_latex": "G ::= \\left(X, \\ast, e\\right)",
+      "inline_latex": "G ::= \\left(X, \\ast, e\\right) \\textrm{ is } \\htmlData{mlg-ref=5c67726f7570}{\\textrm{group}}",
       "arguments": []
     },
     {

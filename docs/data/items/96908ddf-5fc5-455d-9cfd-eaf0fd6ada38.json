@@ -1,6 +1,6 @@
 {
   "id": "96908ddf-5fc5-455d-9cfd-eaf0fd6ada38",
-  "kind": "Defines",
+  "kind": "Declares",
   "definition_keys": [
     "5c656d7074792e736574"
   ],
@@ -8,10 +8,10 @@
   "heading_latex": "\\textrm{empty set}\\quad\\htmlClass{mlg-title-written}{\\emptyset}",
   "body_text": null,
   "page": null,
-  "source": "[\\empty.set]\nDefines: X is \\set\nexpresses:\n. not:\n  . exists: Y is \\set\n    suchThat: Y \"in\" X\nDocumented:\n. called: \"empty set\"\n. written: \"\\emptyset\"\nId: \"96908ddf-5fc5-455d-9cfd-eaf0fd6ada38\"",
+  "source": "[\\empty.set]\nDeclares: X is \\set\nexpresses:\n. not:\n  . exists: Y is \\set\n    suchThat: Y \"in\" X\nDocumented:\n. called: \"empty set\"\n. written: \"\\emptyset\"\nId: \"96908ddf-5fc5-455d-9cfd-eaf0fd6ada38\"",
   "sections": [
     {
-      "label": "Defines",
+      "label": "Declares",
       "inline_argument": "X is \\set",
       "inline_latex": "X \\textrm{ is } \\htmlData{mlg-ref=5c736574}{\\textrm{set}}",
       "arguments": []

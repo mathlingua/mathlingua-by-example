@@ -1,6 +1,6 @@
 {
   "id": "858abdda-c416-4a4e-a0bf-27ecf84cf008",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c67726f75702e656c656d656e743a6f66"
   ],
@@ -8,10 +8,10 @@
   "heading_latex": "\\textrm{element of group }G",
   "body_text": null,
   "page": null,
-  "source": "[\\group.element:of{G}]\nDescribes: x\nwhen: G is \\group\nextends: x is \\monoid.element:of{G}\nEnables:\n. capability: x.inv :=> \\group.inverse:of{x}:in{G}\n  written: \"x+?^{-1}\"\nDocumented:\n. called: \"element of group $G?$\"\nId: \"858abdda-c416-4a4e-a0bf-27ecf84cf008\"",
+  "source": "[\\group.element:of{G}]\nDefines: x\nwhen: G is \\group\nmeans: x is \\monoid.element:of{G}\nEnables:\n. capability: x.inv :=> \\group.inverse:of{x}:in{G}\n  written: \"x+?^{-1}\"\nDocumented:\n. called: \"element of group $G?$\"\nId: \"858abdda-c416-4a4e-a0bf-27ecf84cf008\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "x",
       "inline_latex": "x",
       "arguments": []
@@ -23,7 +23,7 @@
       "arguments": []
     },
     {
-      "label": "extends",
+      "label": "means",
       "inline_argument": "x is \\monoid.element:of{G}",
       "inline_latex": "x \\textrm{ is } \\htmlData{mlg-ref=5c6d6f6e6f69642e656c656d656e743a6f66}{\\textrm{element of monoid }G}",
       "arguments": []

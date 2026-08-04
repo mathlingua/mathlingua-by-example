@@ -1,6 +1,6 @@
 {
   "id": "e4d7371d-29bd-431f-ab09-e114fe89e5cf",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c67726f7570"
   ],
@@ -8,16 +8,16 @@
   "heading_latex": "\\textrm{group}",
   "body_text": null,
   "page": null,
-  "source": "[\\group]\nDescribes: G ::= (X, *, e)\nextends: G is \\monoid via (X, *, e)\nsatisfies:\n. forAll: x \"in\" G\n  then:\n  . exists: y \"in\" G\n    suchThat:\n    . x * y = e\n    . y * x = e\nEnables:\n. capability: x_ \"in\" G :-> x_ is \\group.element:of{G}\n  written: \"x_? \\in G?\"\nDocumented:\n. called: \"group\"\nId: \"e4d7371d-29bd-431f-ab09-e114fe89e5cf\"",
+  "source": "[\\group]\nDefines: G ::= (X, *, e)\nmeans: G is \\monoid via (X, *, e)\nsatisfies:\n. forAll: x \"in\" G\n  then:\n  . exists: y \"in\" G\n    suchThat:\n    . x * y = e\n    . y * x = e\nEnables:\n. capability: x_ \"in\" G :-> x_ is \\group.element:of{G}\n  written: \"x_? \\in G?\"\nDocumented:\n. called: \"group\"\nId: \"e4d7371d-29bd-431f-ab09-e114fe89e5cf\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "G ::= (X, *, e)",
       "inline_latex": "G ::= \\left(X, \\ast, e\\right)",
       "arguments": []
     },
     {
-      "label": "extends",
+      "label": "means",
       "inline_argument": "G is \\monoid via (X, *, e)",
       "inline_latex": "G \\textrm{ is } \\htmlData{mlg-ref=5c6d6f6e6f6964}{\\textrm{monoid}} \\textrm{ via } \\left(X, \\ast, e\\right)",
       "arguments": []

@@ -1,6 +1,6 @@
 {
   "id": "d9405849-68a5-4721-9090-42eb0b9775d2",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c6d61676d612e656c656d656e743a6f66"
   ],
@@ -11,10 +11,10 @@
   ],
   "body_text": null,
   "page": null,
-  "source": "[\\magma.element:of{M ::= (X, *)}]\nDescribes: x\nwhen: M is \\magma\nextends: x \"in\" X\nEnables:\n. capability: x_ [*] y_ :=> x_ |M.*| y_\n  written: \"x_? *? y_?\"\nDocumented:\n. called: \"element of magma $M?$\"\nId: \"d9405849-68a5-4721-9090-42eb0b9775d2\"",
+  "source": "[\\magma.element:of{M ::= (X, *)}]\nDefines: x\nwhen: M is \\magma\nmeans: x \"in\" X\nEnables:\n. capability: x_ [*] y_ :=> x_ |M.*| y_\n  written: \"x_? *? y_?\"\nDocumented:\n. called: \"element of magma $M?$\"\nId: \"d9405849-68a5-4721-9090-42eb0b9775d2\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "x",
       "inline_latex": "x",
       "arguments": []
@@ -26,7 +26,7 @@
       "arguments": []
     },
     {
-      "label": "extends",
+      "label": "means",
       "inline_argument": "x \"in\" X",
       "inline_latex": "x \\in X",
       "arguments": []

@@ -13,7 +13,7 @@
     {
       "label": "Refines",
       "inline_argument": "X",
-      "inline_latex": "X",
+      "inline_latex": "X \\textrm{ is } \\htmlData{mlg-ref=5c736574}{\\textrm{set}}",
       "arguments": []
     },
     {

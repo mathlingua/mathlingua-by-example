@@ -1,6 +1,6 @@
 {
   "id": "9b52b844-0cfa-4238-8c73-8b38265cca81",
-  "kind": "Defines",
+  "kind": "Declares",
   "definition_keys": [
     "5c67726f75702e696e76657273653a6f663a696e"
   ],
@@ -11,10 +11,10 @@
   ],
   "body_text": null,
   "page": null,
-  "source": "[\\group.inverse:of{x}:in{G ::= (X, *, e)}]\nDefines: y \"in\" G\nwhen:\n. G is \\group\n. x \"in\" G\nexpresses:\n. x * y = e\n. y * x = e\nDocumented:\n. called: \"group inverse of $x?$\"\n. written: \"x+?^{-1}\"\nId: \"9b52b844-0cfa-4238-8c73-8b38265cca81\"",
+  "source": "[\\group.inverse:of{x}:in{G ::= (X, *, e)}]\nDeclares: y \"in\" G\nwhen:\n. G is \\group\n. x \"in\" G\nexpresses:\n. x * y = e\n. y * x = e\nDocumented:\n. called: \"group inverse of $x?$\"\n. written: \"x+?^{-1}\"\nId: \"9b52b844-0cfa-4238-8c73-8b38265cca81\"",
   "sections": [
     {
-      "label": "Defines",
+      "label": "Declares",
       "inline_argument": "y \"in\" G",
       "inline_latex": "y \\in G",
       "arguments": []

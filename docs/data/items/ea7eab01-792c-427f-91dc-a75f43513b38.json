@@ -1,6 +1,6 @@
 {
   "id": "ea7eab01-792c-427f-91dc-a75f43513b38",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c7265737472696374696f6e3a6f663a6f6e"
   ],
@@ -8,10 +8,10 @@
   "heading_latex": "\\textrm{restriction of }g(x)\\textrm{ on }X",
   "body_text": null,
   "page": null,
-  "source": "[\\restriction:of{g(x__)}:on{X}]\nDescribes: f(x__)\nwhen:\n. g is \\function:on{A?}:to{B?}\n. X \\:subset:/ A\nextends: f is \\function:on{X}:to{B}\nsatisfies: f(x__) := g(x__)\nDocumented:\n. called: \"restriction of $g?$ on $X?$\"\nId: \"ea7eab01-792c-427f-91dc-a75f43513b38\"",
+  "source": "[\\restriction:of{g(x__)}:on{X}]\nDefines: f(x__)\nwhen:\n. g is \\function:on{A?}:to{B?}\n. X \\:subset:/ A\nmeans: f is \\function:on{X}:to{B}\nsatisfies: f(x__) := g(x__)\nDocumented:\n. called: \"restriction of $g?$ on $X?$\"\nId: \"ea7eab01-792c-427f-91dc-a75f43513b38\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "f(x__)",
       "inline_latex": "f(x)",
       "arguments": []
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "label": "extends",
+      "label": "means",
       "inline_argument": "f is \\function:on{X}:to{B}",
       "inline_latex": "\\htmlData{mlg-ref=5c66756e6374696f6e3a6f6e3a746f}{f \\: : \\: X \\rightarrow B}",
       "arguments": []

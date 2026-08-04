@@ -1,6 +1,6 @@
 {
   "id": "2b2b89a1-d106-4377-ae48-14c704063e5e",
-  "kind": "Describes",
+  "kind": "Defines",
   "definition_keys": [
     "5c3a7375627365743a2f"
   ],
@@ -8,10 +8,10 @@
   "heading_latex": "A\\textrm{ is a subset of }B\\quad\\htmlClass{mlg-title-written}{A \\subset B}",
   "body_text": null,
   "page": null,
-  "source": "[A \\:subset:/ B]\nDescribes: A\nwhen: B is \\set\nextends: A is \\set\nsatisfies:\n. forAll: X \"in\" A\n  then: X \"in\"? B\nRequires:\n. capability: x_ \"in\" A :-> x_ \"in\" B\nDocumented:\n. called: \"$A?$ is a subset of $B?$\"\n. written: \"A? \\subset B?\"\nId: \"2b2b89a1-d106-4377-ae48-14c704063e5e\"",
+  "source": "[A \\:subset:/ B]\nDefines: A\nwhen: B is \\set\nmeans: A is \\set\nsatisfies:\n. forAll: X \"in\" A\n  then: X \"in\"? B\nRequires:\n. capability: x_ \"in\" A :-> x_ \"in\" B\nDocumented:\n. called: \"$A?$ is a subset of $B?$\"\n. written: \"A? \\subset B?\"\nId: \"2b2b89a1-d106-4377-ae48-14c704063e5e\"",
   "sections": [
     {
-      "label": "Describes",
+      "label": "Defines",
       "inline_argument": "A",
       "inline_latex": "A",
       "arguments": []
@@ -23,7 +23,7 @@
       "arguments": []
     },
     {
-      "label": "extends",
+      "label": "means",
       "inline_argument": "A is \\set",
       "inline_latex": "A \\textrm{ is } \\htmlData{mlg-ref=5c736574}{\\textrm{set}}",
       "arguments": []
