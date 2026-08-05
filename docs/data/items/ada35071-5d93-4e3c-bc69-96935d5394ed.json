@@ -13,7 +13,7 @@
     {
       "label": "Refines",
       "inline_argument": "x_ * y_",
-      "inline_latex": "x \\ast y",
+      "inline_latex": "x \\ast y \\textrm{ is } \\htmlData{mlg-ref=5c62696e6172792e6f7065726174696f6e3a6f6e}{\\textrm{binary operation on }X}",
       "arguments": []
     },
     {

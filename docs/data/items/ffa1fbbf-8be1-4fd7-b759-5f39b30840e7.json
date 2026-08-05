@@ -1,0 +1,57 @@
+{
+  "id": "ffa1fbbf-8be1-4fd7-b759-5f39b30840e7",
+  "kind": "Declares",
+  "definition_keys": [
+    "5c6e61747572616c2e73756363"
+  ],
+  "heading": "\\natural.succ(n_)",
+  "heading_latex": "\\textrm{successor of }n\\quad\\htmlClass{mlg-title-written}{n+\\!\\!+}",
+  "body_text": null,
+  "page": null,
+  "source": "[\\natural.succ(n_)]\nDeclares: succ(n_) is (? is \\natural) |-> (? is \\natural)\nDocumented:\n. called: \"successor of $n?$\"\n. written: \"n?+\\!\\!+\"\nId: \"ffa1fbbf-8be1-4fd7-b759-5f39b30840e7\"",
+  "sections": [
+    {
+      "label": "Declares",
+      "inline_argument": "succ(n_) is (? is \\natural) |-> (? is \\natural)",
+      "inline_latex": "succ(n) \\textrm{ is } \\left(? \\textrm{ is } \\htmlData{mlg-ref=5c6e61747572616c}{\\textrm{natural}}\\right) \\mapsto \\left(? \\textrm{ is } \\htmlData{mlg-ref=5c6e61747572616c}{\\textrm{natural}}\\right)",
+      "arguments": []
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "called",
+              "inline_argument": "\"successor of $n?$\"",
+              "inline_latex": "\\textrm{successor of }n",
+              "arguments": []
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "written",
+              "inline_argument": "\"n?+\\!\\!+\"",
+              "inline_latex": "n+\\!\\!+",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"ffa1fbbf-8be1-4fd7-b759-5f39b30840e7\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}

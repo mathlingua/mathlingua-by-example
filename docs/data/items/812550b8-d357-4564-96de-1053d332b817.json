@@ -1,0 +1,45 @@
+{
+  "id": "812550b8-d357-4564-96de-1053d332b817",
+  "kind": "Declares",
+  "definition_keys": [
+    "5c6e61747572616c2e30"
+  ],
+  "heading": "\\natural.0",
+  "heading_latex": "0",
+  "body_text": null,
+  "page": null,
+  "source": "[\\natural.0]\nDeclares: 0 is \\natural\nDocumented:\n. written: \"0\"\nId: \"812550b8-d357-4564-96de-1053d332b817\"",
+  "sections": [
+    {
+      "label": "Declares",
+      "inline_argument": "0 is \\natural",
+      "inline_latex": "0 \\textrm{ is } \\htmlData{mlg-ref=5c6e61747572616c}{\\textrm{natural}}",
+      "arguments": []
+    },
+    {
+      "label": "Documented",
+      "inline_argument": null,
+      "inline_latex": null,
+      "arguments": [
+        {
+          "kind": "group",
+          "heading": null,
+          "sections": [
+            {
+              "label": "written",
+              "inline_argument": "\"0\"",
+              "inline_latex": "0",
+              "arguments": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Id",
+      "inline_argument": "\"812550b8-d357-4564-96de-1053d332b817\"",
+      "inline_latex": null,
+      "arguments": []
+    }
+  ]
+}
