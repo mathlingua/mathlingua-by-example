@@ -969,6 +969,15 @@ declares:
 . succ is (? "in" X) |-> (? "in" X)
 satisfies:
 . 0 "in" X
+. let: n "in" X
+  then: succ(n) "in" X
+. not:
+  . exists: n "in" X
+    suchThat: succ(n) = 0
+. let: n, m "in" X
+  then:
+  . if: succ(n) = succ(m)
+    then: n = m
 Documented:
 . called: "abstract naturals"
 Id: "7d1762ec-ee47-4d7d-86b9-cc0150b06bd0"
