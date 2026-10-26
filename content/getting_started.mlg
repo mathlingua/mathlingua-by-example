@@ -886,7 +886,7 @@ Documented:
 . called: "$H?$ is a subgroup of $G?$"
 . written: "H? \leq G?"
 Justification:
-. [1]
+. for: (:1:)
   have: *' is \restriction:of{`*`}:on{X' \.set.cross./ X'}
   asserting: (.X' \.set.cross./ X'.) \:subset?:/ (.G \.set.cross./ G.)
   because: X' \:subset?:/ X
